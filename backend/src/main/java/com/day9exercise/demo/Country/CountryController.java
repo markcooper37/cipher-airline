@@ -14,13 +14,14 @@ public record CountryController(CountryService countryService) {
     public CountryController {
 
     }
-    @GetMapping("/explore")
+    @GetMapping("/exploreflights")
     public ArrayList<Country> listAllCountries() {
         return countryService.getAllCountries();
     }
 
+    // finding flight based on id
     @GetMapping("/country")
-    public Optional<Country> requestedCountry(int countryId){
+    public Optional<Country> requestedCountry(@RequestParam int countryId){
         return countryService.requestedCountry(countryId);
     }
 
