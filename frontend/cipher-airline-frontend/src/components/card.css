@@ -41,3 +41,13 @@
     background-color: whitesmoke;
     margin: 3rem;
 }
+
+.destinationCardImage {
+    width: 700px;
+    height: auto;
+}
+
+.destination-card-img {
+    width: 700px;
+    height:318px;
+}

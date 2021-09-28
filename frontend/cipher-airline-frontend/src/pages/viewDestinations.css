@@ -1,0 +1,23 @@
+.viewDestinationsBody {
+    display:flex;
+}
+
+.viewDestinationsBodyLeft {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.viewDestinationsBodyRight {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.viewDestinationsHeader h1 {
+    text-align: center;
+}

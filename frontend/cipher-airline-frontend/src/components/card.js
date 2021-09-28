@@ -31,8 +31,10 @@ function FindFlightsCard(props) {
 function DestinationCard(props) {
     return (
         <>
-        <div className="destinationCard" styles="width: 5rem;">
-            {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
+        <div className="destinationCard">
+            <div className="destinationCardImage">
+                <img src={props.imageSrc} className="destination-card-img" alt="Mountains in Italy, called the Dolamites" />
+            </div>
             <h1 className="destinationName">{props.name}</h1>
         </div>
             

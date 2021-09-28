@@ -15,6 +15,9 @@ function Navbar() {
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/destinations">View Destinations</a>
                         </li>
+                        {/* <li class="nav-item">
+                            <a class="nav-link" href="#">Available Flights</a>
+                        </li> */}
                         <li class="nav-item">
                             <a class="nav-link" href="#">View Bookings</a>
                         </li>
@@ -26,9 +29,6 @@ function Navbar() {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">View Bookings</a>
                         </li>
                     </ul>
                 </div>
