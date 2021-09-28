@@ -1,16 +1,18 @@
-import React from "react"
+import React, { Component } from "react"
 import DestinationList from '../components/destinationList'
 
-class destinationContainer extends React.Component {
+class destinationContainer extends Component {
 
     constructor (props){
         super(props);
 
         this.state = {
-            destinations: []
+            destinations: [],
+            number: null
           }
 
     }
+
     
     componentDidMount() {
       this.getDestinationData();
@@ -20,15 +22,33 @@ class destinationContainer extends React.Component {
         fetch('http://localhost:8080/api/country/exploreflights')
             .then((response) => response.json())
             .then(data => this.setState({destinations: data}))
+            .then(this.setState({number:this.props.selector}))
+            // .then(data => this.setState({oneDestination: data[this.props.selector]}))
             .catch(error => console.log(error))
+            
     }
+
+    // getDestinationIndex() {
+    //     this.setState({number:1})
+    // }
+
+    // getDestination() {
+    //   let destinations_list= this.state.destinations;
+    //   let destination = destinations_list[this.props.value];
+    //   return destination
+    // }
   
     
     render(){
 
         return (
+            
             <>
-                <DestinationList destinations={this.state.destinations}/>
+                    {/* <div>{this.state.destinations.country_name}</div> */}
+                <DestinationList destinations={this.state.destinations} number={this.state.number}/>
+                {/* <DestinationList oneDestination={this.state.oneDestination} /> */}
+                {/* <div>{this.state.oneDestination}</div> */}
+                
             </>
         )
     }
