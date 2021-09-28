@@ -4,6 +4,7 @@ import com.day9exercise.demo.Flight.FlightRepositoryPostgres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -20,11 +21,14 @@ public class CountryService {
     }
 
     //GET REQUEST
-    public void getAllCountries(){
+    public ArrayList<Country> getAllCountries(){
+        ArrayList<Country> countries = new ArrayList<Country>();
         for (Country value : countryRepositoryPostgres.findAll()) {
+            countries.add(value);
             System.out.println(value);
         }
-        countryRepositoryPostgres.findAll();
+         countryRepositoryPostgres.findAll();
+        return countries;
     }
 
     //GET REQUEST

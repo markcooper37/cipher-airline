@@ -3,6 +3,7 @@ package com.day9exercise.demo.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 @RequestMapping("api/country")
@@ -13,13 +14,14 @@ public record CountryController(CountryService countryService) {
     public CountryController {
 
     }
-    @GetMapping
-    public void listAllCountries() {
-        countryService.getAllCountries();
+    @GetMapping("/exploreflights")
+    public ArrayList<Country> listAllCountries() {
+        return countryService.getAllCountries();
     }
 
+    // finding flight based on id
     @GetMapping("/country")
-    public Optional<Country> requestedCountry(int countryId){
+    public Optional<Country> requestedCountry(@RequestParam int countryId){
         return countryService.requestedCountry(countryId);
     }
 
