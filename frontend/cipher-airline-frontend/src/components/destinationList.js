@@ -9,6 +9,7 @@ const DestinationList = (props) => {
     return (
         <>
             {destinationComponents}
+            
         </>
     )
 }

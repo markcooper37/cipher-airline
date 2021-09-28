@@ -28,6 +28,16 @@ function FindFlightsCard(props) {
     )
 }
 
+// function DestinationCard(props) {
+//     return (
+//         <>
+//             {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
+//             <p className="destinationName">{props.name}</p>
+
+//         </>
+//     )
+// }
+
 export{ Card,
-        FindFlightsCard
+        FindFlightsCard,
 }

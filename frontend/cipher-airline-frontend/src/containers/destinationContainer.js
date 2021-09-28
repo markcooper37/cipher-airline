@@ -22,6 +22,12 @@ class destinationContainer extends React.Component {
             .then(data => this.setState({destinations: data}))
             .catch(error => console.log(error))
     }
+
+    // getDestination() {
+    //   let destinations_list= this.state.destinations;
+    //   let destination = destinations_list[this.props.value];
+    //   return destination
+    // }
   
     
     render(){
@@ -29,6 +35,9 @@ class destinationContainer extends React.Component {
         return (
             <>
                 <DestinationList destinations={this.state.destinations}/>
+                {/* <DestinationList destinations={this.getDestination()}></DestinationList>; */}
+                {/* {this.getDestination()} */}
+                
             </>
         )
     }
