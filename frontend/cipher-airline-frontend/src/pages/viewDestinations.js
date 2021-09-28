@@ -1,6 +1,6 @@
 //import './homepage.css';
 
-import {Card} from '../components/card.js';
+import {Card, DestinationCard} from '../components/card.js';
 import Italy from '../resources/dolomites_rectangle.jpg';
 import DestinationContainer from '../containers/destinationContainer.js';
 import React from "react";
@@ -10,13 +10,18 @@ function viewDestinations() {
     <>
       <Card imageSrc={Italy} />
       {/* some kind of heading */}
-      {/* cards for each destination containing an image and the country name */}
+
+      <div className="viewDestinationsBody">
+        {/* cards for each destination containing an image and the country name */}
      
-      {/* <Card name={} */}
+        <DestinationCard name={<DestinationContainer selector={0} />}/>
+        <DestinationCard name={<DestinationContainer selector={1} />}/>
+        {/* <DestinationCard name={<DestinationContainer/>} /> */}
+      </div>
+      
 
-      <DestinationContainer/>
+      
     </>
-
 
   );
 }

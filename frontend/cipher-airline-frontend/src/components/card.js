@@ -18,7 +18,7 @@ function Card(props) {
 function FindFlightsCard(props) {
     return (
         <div className="findFlightsCard" styles="width: 18rem;">
-            {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
+            {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolomites" /> */}
             <h5 className ="findFlightsCar-title">{props.title}</h5>
             <div className ="findFlightsCard-body">
                 <p className ="findFlightsCar-text">{props.text}</p>
@@ -28,16 +28,20 @@ function FindFlightsCard(props) {
     )
 }
 
-// function DestinationCard(props) {
-//     return (
-//         <>
-//             {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
-//             <p className="destinationName">{props.name}</p>
+function DestinationCard(props) {
+    return (
+        <>
+        <div className="destinationCard" styles="width: 5rem;">
+            {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
+            <h1 className="destinationName">{props.name}</h1>
+        </div>
+            
 
-//         </>
-//     )
-// }
+        </>
+    )
+}
 
 export{ Card,
         FindFlightsCard,
+        DestinationCard
 }
