@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Switch>
         <Route path="/" component={Homepage} exact />
-        <Route path="/image" component={viewDestinations} exact />
+        <Route path="/destinations" component={viewDestinations} exact />
       </Switch>
     </BrowserRouter>
   );

@@ -14,7 +14,7 @@ public record CountryController(CountryService countryService) {
     public CountryController {
 
     }
-    @GetMapping("/exploreflights")
+    @GetMapping(value = "/exploreflights")
     public ArrayList<Country> listAllCountries() {
         return countryService.getAllCountries();
     }

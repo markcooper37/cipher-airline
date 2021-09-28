@@ -13,7 +13,7 @@ function Navbar() {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/image">View Destinations</a>
+                            <a class="nav-link active" aria-current="page" href="/destinations">View Destinations</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">View Bookings</a>
