@@ -24,6 +24,11 @@
     
 }
 
+.findFlightsCar-title {
+    text-align: center;
+    font-size: 200%;
+}
+
 .findFlightsCard-body {
     display: flex;
 }

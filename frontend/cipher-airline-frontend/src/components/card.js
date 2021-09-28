@@ -19,8 +19,8 @@ function FindFlightsCard(props) {
     return (
         <div className="findFlightsCard" styles="width: 18rem;">
             {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
+            <h5 className ="findFlightsCar-title">{props.title}</h5>
             <div className ="findFlightsCard-body">
-                <h5 className ="findFlightsCar-title">{props.title}</h5>
                 <p className ="findFlightsCar-text">{props.text}</p>
                 <a href="#" className ="btn btn-primary">{props.buttonText}</a>
             </div>
