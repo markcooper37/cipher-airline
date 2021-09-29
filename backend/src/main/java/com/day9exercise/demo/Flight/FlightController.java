@@ -14,7 +14,7 @@ public record FlightController(FlightService flightService) {
     public FlightController {
     }
 
-    @GetMapping("/list")
+    @GetMapping("/flightList")
     public List<Flight> getListFlights(){
 
         return flightService.getListFlights();
