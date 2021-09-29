@@ -43,7 +43,17 @@ function DestinationCard(props) {
     )
 }
 
+function FaqCard(props) {
+    return (
+        <div className="FaqCard">
+            <h3>{props.title}</h3>
+            <p>{props.text}</p>
+        </div>
+    )
+}
+
 export{ Card,
         FindFlightsCard,
-        DestinationCard
+        DestinationCard,
+        FaqCard
 }
