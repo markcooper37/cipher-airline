@@ -16,14 +16,14 @@ function viewDestinations() {
       </div>
       <div className="viewDestinationsBody">
         <div className="viewDestinationsBodyLeft">
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} />}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} />}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} />}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll={true}/>}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll = {false}/>}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll = {false}/>}/>
         </div>
         <div className="viewDestinationsBodyRight">
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} />}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} />}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} />}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {true}/>}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {false}/>}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {false}/>}/>
         </div>
         {/* cards for each destination containing an image and the country name */}
      
