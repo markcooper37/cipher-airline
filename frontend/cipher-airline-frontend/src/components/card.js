@@ -31,8 +31,10 @@ function FindFlightsCard(props) {
 function DestinationCard(props) {
     return (
         <>
-        <div className="destinationCard" styles="width: 5rem;">
-            {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" /> */}
+        <div className="destinationCard">
+            <div className="destinationCardImage">
+                <img src={props.imageSrc} className="destination-card-img" alt="Mountains in Italy, called the Dolamites" />
+            </div>
             <h1 className="destinationName">{props.name}</h1>
         </div>
             
@@ -41,7 +43,28 @@ function DestinationCard(props) {
     )
 }
 
+function ViewBookedFlightsLogIn(props) {
+    return (
+        <div className="bookedFlightsLogIn" styles="width: 18rem;">
+            <h5 className ="bookedFlightsCar-title">{props.title}</h5>
+            <div className ="bookedFlightsCard-body">
+                <form>
+                    <label>
+                        Customer ID:
+                        <input type="text" name="Customer ID" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+                {/* <p className ="bookedFlightsCar-text">{props.text}</p>
+                <a href="#" className ="btn btn-primary">{props.buttonText}</a> */}
+            </div>
+        </div>
+    )
+}
+
+
 export{ Card,
         FindFlightsCard,
-        DestinationCard
+        DestinationCard,
+        ViewBookedFlightsLogIn
 }

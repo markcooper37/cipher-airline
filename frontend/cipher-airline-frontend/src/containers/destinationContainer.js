@@ -8,7 +8,8 @@ class destinationContainer extends Component {
 
         this.state = {
             destinations: [],
-            number: null
+            number: null,
+            viewAll: false
           }
 
     }
@@ -23,6 +24,7 @@ class destinationContainer extends Component {
             .then((response) => response.json())
             .then(data => this.setState({destinations: data}))
             .then(this.setState({number:this.props.selector}))
+            .then(this.setState({viewAll:this.props.viewAll}))
             // .then(data => this.setState({oneDestination: data[this.props.selector]}))
             .catch(error => console.log(error))
             
@@ -45,7 +47,7 @@ class destinationContainer extends Component {
             
             <>
                     {/* <div>{this.state.destinations.country_name}</div> */}
-                <DestinationList destinations={this.state.destinations} number={this.state.number}/>
+                <DestinationList destinations={this.state.destinations} number={this.state.number} viewAll={this.state.viewAll}/>
                 {/* <DestinationList oneDestination={this.state.oneDestination} /> */}
                 {/* <div>{this.state.oneDestination}</div> */}
                 

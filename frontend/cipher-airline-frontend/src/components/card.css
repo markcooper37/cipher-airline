@@ -15,6 +15,26 @@
     padding: 5%;
 } */
 
+.bookedFlightsLogIn {
+    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: whitesmoke;
+    margin: 25rem;
+}
+
+.bookedFlightsCar-title {
+    text-align: center;
+    font-size: 200%;
+}
+
+.bookedFlightsCard-body {
+    display: flex;
+    justify-content: space-between;
+
+}
+
 .findFlightsCard {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -31,6 +51,8 @@
 
 .findFlightsCard-body {
     display: flex;
+    justify-content: space-between;
+
 }
 
 .destinationCard {
@@ -40,4 +62,14 @@
     border-radius: 0px;
     background-color: whitesmoke;
     margin: 3rem;
+}
+
+.destinationCardImage {
+    width: 700px;
+    height: auto;
+}
+
+.destination-card-img {
+    width: 700px;
+    height:318px;
 }

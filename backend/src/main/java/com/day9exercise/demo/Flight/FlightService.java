@@ -4,8 +4,11 @@ import com.day9exercise.demo.Country.CountryRepositoryPostgres;
 import com.day9exercise.demo.Customer.CustomerRepositoryPostgres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.javatuples.Ennead;
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class FlightService {
@@ -29,7 +32,28 @@ public class FlightService {
         flightRepositoryPostgres.save(flight);
     }
 
-    public void viewCustomerFlight(int customerId){
+
+    public ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
+                            AtomicInteger, AtomicReference, AtomicReference, AtomicReference>> viewCustomerFlight(int customerId){
+
+
+        ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
+                  AtomicInteger, AtomicReference, AtomicReference, AtomicReference>> bookedFlightsDetails = new ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
+                                                                                                                                 AtomicInteger, AtomicReference, AtomicReference, AtomicReference>>();
+
+        AtomicInteger flightId = new AtomicInteger();
+        AtomicReference<String> customerFlightNumber = new AtomicReference<>();
+        AtomicReference<String> countryName = new AtomicReference<>();
+        AtomicReference<LocalDateTime> departureTime = new AtomicReference<>();
+        AtomicReference<LocalDateTime> arrivalTime = new AtomicReference<>();
+        AtomicInteger numberOfPassengers = new AtomicInteger();
+        AtomicReference<LocalDateTime> returnArrivalTime = new AtomicReference<>();
+        AtomicReference<LocalDateTime> returnDepartureTime = new AtomicReference<>();
+        AtomicReference<Double> totalPrice = new AtomicReference<>();
+
+
+
+
         customerRepositoryPostgres.findById(customerId)
                 .ifPresentOrElse(customer -> {
                     System.out.println("First name : " + customer.getFirstName());
@@ -43,16 +67,26 @@ public class FlightService {
         flightRepositoryPostgres.findAllByCustomersId(customerId)
                 .stream().allMatch(flight -> {
                     if(flight.getCustomersId() == customerId){
+                        flightId.set(flight.getFlightId());
+                        customerFlightNumber.set(flight.getCustomerFlightNumber());
                         System.out.println("Your flight id is: " + flight.getFlightId());
                         System.out.println("Your flight number is: " + flight.getCustomerFlightNumber());
+
                         countryRepositoryPostgres.findById(flight.getCountryId())
                                 .ifPresentOrElse(country -> {
+                                    countryName.set(country.getName());
+                                    departureTime.set(country.getTimeDeparture());
+                                    arrivalTime.set(country.getTimeArrival());
                                     System.out.println("Destination: " + country.getName());
                                     System.out.println("Expected Departure time: " + country.getTimeDeparture());
                                     System.out.println("Expected Arrival time: " + country.getTimeArrival());
                                 }, () -> {
                                     System.out.println("Sorry we could not find your country id");
                                 });
+                        numberOfPassengers.set(flight.getNumberOfPassenger());
+                        returnDepartureTime.set(flight.getReturnTimeDeparture());
+                        returnArrivalTime.set(flight.getReturnTimeArrival());
+                        totalPrice.set(flight.getTotalPrice());
                         System.out.println("Total amount of passenger: " + flight.getNumberOfPassenger());
                         System.out.println("Return expected departure time: " + flight.getReturnTimeDeparture());
                         System.out.println("Return expected ticket arrival time: " + flight.getReturnTimeArrival());
@@ -60,10 +94,22 @@ public class FlightService {
                     } else {
                         System.out.println("We were unable to find any customer id matches");
                     }
-                  return true;
+
+                    Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
+                            AtomicInteger, AtomicReference, AtomicReference, AtomicReference> customerFlightDetails = new Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference, AtomicInteger,
+                            AtomicReference, AtomicReference, AtomicReference>(flightId, customerFlightNumber, countryName, departureTime, arrivalTime,
+                            numberOfPassengers, returnDepartureTime, returnArrivalTime, totalPrice);
+
+                    bookedFlightsDetails.add(customerFlightDetails);
+
+
+                    return true;
                 }
                 );
+
+        return bookedFlightsDetails;
     }
+
 
     public void updateFlight(int customerFlightId){
         Scanner scanner = new Scanner(System.in);

@@ -16,7 +16,10 @@ function Navbar() {
                             <a class="nav-link active" aria-current="page" href="/destinations">View Destinations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">View Bookings</a>
+                            <a class="nav-link" href="/all-flights">All Available Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/details-confirmation">View Bookings</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Manage Bookings</a>
@@ -25,10 +28,7 @@ function Navbar() {
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">View Bookings</a>
+                            <a class="nav-link" href="/contact">Contact Us</a>
                         </li>
                     </ul>
                 </div>

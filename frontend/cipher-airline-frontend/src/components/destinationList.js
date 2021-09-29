@@ -8,8 +8,8 @@ const DestinationList = (props) => {
     //     return <Destination destination={destination} key={index}/>
     // });
 
-    const destinationComponents = props.destinations.map((destination, number, index) => {
-        return <Destination destination={destination} number={number} key={index}/>
+    const destinationComponents = props.destinations.map((destination, number, viewAll, index) => {
+        return <Destination destination={destination} number={number} viewAll = {viewAll} key={index}/>
     });
 
 
