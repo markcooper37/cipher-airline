@@ -1,5 +1,6 @@
 import './card.css'
 import React from 'react'
+import CustomerIdForm from './customerIdForm'
 
 
 function Card(props) {
@@ -43,18 +44,35 @@ function DestinationCard(props) {
     )
 }
 
+function PeopleCard(props) {
+    return (
+        <> 
+        <div className="peopleCard">
+            <div className="peopleCardImage">
+                <img src={props.imageSrc} className="people-card-image" alt={props.alt} />
+            </div>
+            <div className="peopleInfo">
+            <h1 className="personName">{props.name}</h1>
+            </div>
+        </div>
+        
+        </>
+    )
+}
+
 function ViewBookedFlightsLogIn(props) {
     return (
         <div className="bookedFlightsLogIn" styles="width: 18rem;">
             <h5 className ="bookedFlightsCar-title">{props.title}</h5>
             <div className ="bookedFlightsCard-body">
-                <form>
+                {/*<form>
                     <label>
                         Customer ID:
                         <input type="text" name="Customer ID" />
                     </label>
                     <input type="submit" value="Submit" />
-                </form>
+                </form> */}
+                <CustomerIdForm></CustomerIdForm>
                 {/* <p className ="bookedFlightsCar-text">{props.text}</p>
                 <a href="#" className ="btn btn-primary">{props.buttonText}</a> */}
             </div>
@@ -66,5 +84,6 @@ function ViewBookedFlightsLogIn(props) {
 export{ Card,
         FindFlightsCard,
         DestinationCard,
-        ViewBookedFlightsLogIn
+        ViewBookedFlightsLogIn,
+        PeopleCard
 }

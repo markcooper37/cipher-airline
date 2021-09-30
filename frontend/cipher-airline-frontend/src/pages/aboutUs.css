@@ -1,0 +1,10 @@
+.aboutUsBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutUsText {
+    align-items: left;
+    width: 1000px;
+}

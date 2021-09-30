@@ -16,7 +16,7 @@ function ViewBookingDetails() {
         <div className="viewDestinationsBodyLeft">
           {/* <DestinationCard name={<ViewBookingDetailsContainer />}/> */}
           {/* {/* <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll = {false}/>}/> */}
-          <DestinationCard name={<ViewBookingDetailsContainer selector={0} customerId={3} />}/> 
+          <DestinationCard name={<ViewBookingDetailsContainer selector={0} customerId={1} />}/> 
         </div>
         {/* <div className="viewDestinationsBodyRight">
           <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {true}/>}/>

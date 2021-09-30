@@ -22,7 +22,7 @@ class viewBookingDetailsContainer extends Component {
 
     getBookingDetailsData() {
     
-        fetch('http://localhost:8080/flights/userId?customerId=' + 3)
+        fetch('http://localhost:8080/flights/userId?customerId=' + this.props.customerId)
             .then((response) => response.json())
             .then(data => this.setState({bookingDetails: data}))
             .then(this.setState({number:this.props.selector}))
