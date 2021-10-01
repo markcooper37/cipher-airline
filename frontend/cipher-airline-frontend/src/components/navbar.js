@@ -19,7 +19,7 @@ function Navbar() {
                             <a class="nav-link" href="/all-flights">All Available Flights</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/details-confirmation">View/Manage Bookings</a>
+                            <a class="nav-link" href="/booking-details">View/Manage Bookings</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/about-us">About Us</a>
