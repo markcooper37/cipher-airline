@@ -6,8 +6,8 @@ import Navbar from '../components/navbar.js';
 import AllAvailableFlights from './allAvailableFlights.js';
 import ViewBookingConfirmation from './viewBookingConfirmation.js';
 import ViewBookingDetails from './viewBookingDetails.js';
-import Contact from './contact.js';
 import AboutUs from './aboutUs.js';
+import ContactUs from './contact.js';
 
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
         <Route path="/all-flights" component={AllAvailableFlights} exact />
         <Route path="/details-confirmation" component={ViewBookingConfirmation} exact />
         <Route path="/booking-details" component={ViewBookingDetails} exact />
-        <Route path="/contact" component={Contact} exact />
         <Route path="/about-us" component={AboutUs} exact />
+        <Route path="/contact-us" component={ContactUs} exact />
       </Switch>
     </BrowserRouter>
   );
