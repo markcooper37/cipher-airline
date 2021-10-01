@@ -41,9 +41,9 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(235, 231, 231);
     margin: 3rem;
-    
+    padding-bottom: 10px;
 }
 
 .findFlightsCar-title {
@@ -53,8 +53,11 @@
 
 .findFlightsCard-body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
 
+#findFlightsInput {
+    margin-right: 10px;
 }
 
 .destinationCard {

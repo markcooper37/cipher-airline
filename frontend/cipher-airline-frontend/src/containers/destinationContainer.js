@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import DestinationList from '../components/destinationList'
+import ReturnAllDestinations from "../components/returnAllDestinations";
 
 class destinationContainer extends Component {
 
@@ -39,17 +40,17 @@ class destinationContainer extends Component {
     //   let destination = destinations_list[this.props.value];
     //   return destination
     // }
-  
     
     render(){
 
         return (
             
             <>
-                    {/* <div>{this.state.destinations.country_name}</div> */}
-                <DestinationList destinations={this.state.destinations} number={this.state.number} viewAll={this.state.viewAll}/>
+                {/* <div>{this.state.destinations.country_name}</div> */}
+                {/* <DestinationList destinations={this.state.destinations} number={this.state.number} viewAll={this.state.viewAll}/> */}
                 {/* <DestinationList oneDestination={this.state.oneDestination} /> */}
                 {/* <div>{this.state.oneDestination}</div> */}
+                { <ReturnAllDestinations destinations={this.state.destinations} viewAll={this.state.viewAll}/>}
                 
             </>
         )

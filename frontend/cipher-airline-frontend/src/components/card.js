@@ -1,7 +1,5 @@
 import './card.css'
 import React from 'react'
-import CustomerIdForm from './customerIdForm'
-
 
 function Card(props) {
     return (
@@ -22,8 +20,12 @@ function FindFlightsCard(props) {
             {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolomites" /> */}
             <h5 className ="findFlightsCar-title">{props.title}</h5>
             <div className ="findFlightsCard-body">
-                <p className ="findFlightsCar-text">{props.text}</p>
-                <a href="#" className ="btn btn-primary">{props.buttonText}</a>
+                <form>
+                    <input id='findFlightsInput' type="text" placeholder="Enter destination" />
+                    <button type="submit">Search</button>
+                </form>
+                {/* <p className ="findFlightsCar-text">{props.text}</p> 
+                <a href="#" className ="btn btn-primary">{props.buttonText}</a>*/}
             </div>
         </div>
     )

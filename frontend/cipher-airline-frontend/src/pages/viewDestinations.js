@@ -5,6 +5,8 @@ import Italy from '../resources/dolomites_rectangle.jpg';
 import DestinationContainer from '../containers/destinationContainer.js';
 import Japan from '../resources/JapanViewDestination.jpg';
 import React from "react";
+import ReturnAllDestinations from '../components/returnAllDestinations';
+import DestinationList from '../components/destinationList';
 
 function viewDestinations() {
   return (
@@ -15,17 +17,12 @@ function viewDestinations() {
         <h1>Countries/terrorities</h1>
       </div>
       <div className="viewDestinationsBody">
-        <div className="viewDestinationsBodyLeft">
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll={true}/>}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll = {false}/>}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll = {false}/>}/>
-        </div>
-        <div className="viewDestinationsBodyRight">
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {true}/>}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {false}/>}/>
-          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {false}/>}/>
-        </div>
-        {/* cards for each destination containing an image and the country name */}
+
+          <DestinationContainer selector={0} viewAll={true}/>
+        
+        
+        
+        {/*} cards for each destination containing an image and the country name */}
      
         
         

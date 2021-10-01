@@ -20,7 +20,7 @@ class viewBookingsFormContainer extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('An essay was submitted: ' + this.state.value);
+      window.location.href = 'http://localhost:3000/booking-details';
       event.preventDefault();
     }
   
