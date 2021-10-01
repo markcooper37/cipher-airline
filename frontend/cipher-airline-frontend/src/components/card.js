@@ -62,19 +62,10 @@ function PeopleCard(props) {
 
 function ViewBookedFlightsLogIn(props) {
     return (
-        <div className="bookedFlightsLogIn" styles="width: 18rem;">
+        <div className="bookedFlightsLogIn">
             <h5 className ="bookedFlightsCar-title">{props.title}</h5>
             <div className ="bookedFlightsCard-body">
-                {/*<form>
-                    <label>
-                        Customer ID:
-                        <input type="text" name="Customer ID" />
-                    </label>
-                    <input type="submit" value="Submit" />
-                </form> */}
-                <CustomerIdForm></CustomerIdForm>
-                {/* <p className ="bookedFlightsCar-text">{props.text}</p>
-                <a href="#" className ="btn btn-primary">{props.buttonText}</a> */}
+                <p className ="bookedFlightsCar-text">{props.text}</p>
             </div>
         </div>
     )

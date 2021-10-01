@@ -10,7 +10,6 @@ class viewBookingDetailsContainer extends Component {
         this.state = {
             bookingDetails: [],
             number: null,
-            //customer: null
           }
 
     }
