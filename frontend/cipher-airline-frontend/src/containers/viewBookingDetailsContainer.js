@@ -14,6 +14,8 @@ class viewBookingDetailsContainer extends Component {
 
     }
 
+
+
     
     componentDidMount() {
       this.getBookingDetailsData();
@@ -21,13 +23,14 @@ class viewBookingDetailsContainer extends Component {
 
     getBookingDetailsData() {
     
-        fetch('http://localhost:8080/flights/userId?customerId=' + this.props.customerId)
+        fetch('http://localhost:8080/flights/userId?customerId= ' +  this.props.customerId)
             .then((response) => response.json())
             .then(data => this.setState({bookingDetails: data}))
             .then(this.setState({number:this.props.selector}))
             .catch(error => console.log(error))
             
     }
+
   
     
     render(){
@@ -36,8 +39,8 @@ class viewBookingDetailsContainer extends Component {
             
             <>
                     {/* <div>{this.state.destinations.country_name}</div> */}
-                <ViewBookingDetailsList bookingsInformation={this.state.bookingDetails} number={this.state.number}/>
-                {/* <ViewBookingDetailsList bookingsInformation={this.state.bookingDetails}/> */}
+                {/* <ViewBookingDetailsList bookingsInformation={this.state.bookingDetails} changeNumber={this.changeNumber} number={this.state.number}/> */}
+                <ViewBookingDetailsList bookingsInformation={this.state.bookingDetails} selector={this.state.number}/>
                 {/* <DestinationList oneDestination={this.state.oneDestination} /> */}
                 {/* <div>{this.state.oneDestination}</div> */}
                 

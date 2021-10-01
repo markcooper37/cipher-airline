@@ -3,10 +3,13 @@
 
 import React from "react";
 import ViewBookingForm from '../components/viewBookingForm.js'
+import ViewBookingConfirmation from "../pages/viewBookingConfirmation.js";
+import ViewBookingDetails from "../pages/viewBookingDetails.js";
 
 class viewBookingsFormContainer extends React.Component {
     constructor(props) {
       super(props);
+
       this.state = {
         value: ''
       };
@@ -20,23 +23,31 @@ class viewBookingsFormContainer extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('An essay was submitted: ' + this.state.value);
+      console.log(this.state.value);
+      window.location.href = 'http://localhost:3000/booking-details';
+      // <ViewBookingDetails customerId={10}/>
+      // alert('An essay was submitted: ' + this.state.value);
       event.preventDefault();
     }
+
+
   
     render() {
       return (
-        // <>
-          
-        // </>
+        <>
         <form onSubmit={this.handleSubmit}>
           <label>
-          Booking Reference id
+          Customer id
             <textarea value={this.state.value} onChange={this.handleChange} />
           </label>
-          
           <input type="submit" value="Submit" />
         </form>
+        
+
+        <ViewBookingDetails customerId={this.state.value} />
+        
+
+        </>
       );
     }
   }

@@ -55,8 +55,22 @@ function ViewBookedFlightsLogIn(props) {
 }
 
 
+function FlightInfoCard(props) {
+    return (
+        <>
+        <div className="flightInfoCard">
+            <p className="flightInfoText">{props.flightInfo}</p>
+        </div>
+        </>
+    )
+}
+
+
+
+
 export{ Card,
         FindFlightsCard,
         DestinationCard,
-        ViewBookedFlightsLogIn
+        ViewBookedFlightsLogIn,
+        FlightInfoCard
 }

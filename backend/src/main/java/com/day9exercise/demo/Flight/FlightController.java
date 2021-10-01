@@ -43,7 +43,9 @@ public record FlightController(FlightService flightService) {
     }
 
     @DeleteMapping("/byCustomerFlightNumber")
-    public void deleteFlightByCustomerFlightNumber(int customerId, String customerFlightNumber){
+    public void deleteFlightByCustomerFlightNumber(@RequestParam int customerId,
+                                                   @RequestParam String customerFlightNumber){
+
         flightService.deleteCustomerFlightByFlightNumber(customerId, customerFlightNumber);
     }
 
