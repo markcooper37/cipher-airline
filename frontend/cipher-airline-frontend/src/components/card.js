@@ -1,6 +1,8 @@
 import './card.css'
 import React from 'react'
 import CustomerIdForm from './customerIdForm'
+import AboutUsTopImage from '../resources/dolomites_rectangle.jpg'
+var aboutUsBanner = 'dolomites_rectangle.jpg'
 
 
 function Card(props) {
@@ -44,19 +46,48 @@ function DestinationCard(props) {
     )
 }
 
-function PeopleCard(props) {
+function AboutUsCard(props) {
     return (
         <> 
-        <div className="peopleCard">
-            <div className="peopleCardImage">
-                <img src={props.imageSrc} className="people-card-image" alt={props.alt} />
+        <div className="aboutUsCard">
+            <div className="aboutUsCardImage">
+                <img src={props.imageSrc} className="aboutUs-card-image" alt={props.alt} />
             </div>
-            <div className="peopleInfo">
-            <h1 className="personName">{props.name}</h1>
+            <div className="aboutUsInfo">
+            <h4 className="aboutUsInfoHeader">{props.name}</h4>
+            <p className="aboutUsInfoText">{props.text}</p>
+            <p className="aboutUsInfoText">{props.text1}</p>
+            <p className="aboutUsInfoText">{props.text2}</p>
+
+
+            <button class="moreButton" ><span>More </span></button>
+
             </div>
         </div>
         
         </>
+    )
+}
+
+function AboutUsCardBannerText(props) {
+    return (
+        <> 
+        <div className="aboutUsCardBanner">
+            <h5 >{props.title}</h5>
+            <p >{props.text}</p>
+            </div>        
+        </>
+    )
+}
+function TopCard(props) {
+    return (
+        <div className="topCard" style={{backgroundImage: `url(${aboutUsBanner})`, backgroundSize: "100% 100%", width: "70%", height: "30vh"}}>
+            {/* <img src={props.imageSrc} className="card-img-top" alt={props.alt} /> */}
+            { <div className ="aboutUsTopCardInfo">
+                <h1 className ="AboutUsTopCardTitle">{props.title}</h1>
+                <p className ="AboutUsTopCardText">{props.text}</p>
+            </div>}
+        </div>
     )
 }
 
@@ -70,7 +101,26 @@ function ViewBookedFlightsLogIn(props) {
         </div>
     )
 }
+function ContactUsCard(props) {
+    return (
+        <> 
+        <div className="contactUsCard">
+            <div className="contactUsCardImage">
+                <img src={props.imageSrc} className="contactUs-card-image" alt={props.alt} />
+            </div>
+            <div className="contactUsInfo">
+            <h4 className="contactUsInfoHeader">{props.name}</h4>
+            <p className="contactUsInfoText">{props.text}</p>
+            <p className="contactUsInfoText">{props.text1}</p>
+            <p className="contactUsInfoText">{props.text2}</p>
+            <button class="moreButton" ><span>More </span></button>
 
+            </div>
+        </div>
+        
+        </>
+    )
+}
 function FaqCard(props) {
     return (
         <div className="FaqCard">
@@ -79,11 +129,43 @@ function FaqCard(props) {
         </div>
     )
 }
+function FaqsCard(props) {
+    return (
+        <> 
+        <div className="faqsCard">
+            <div className="faqsCardImage">
+                <img src={props.imageSrc} className="faqs-card-image" alt={props.alt} />
+            </div>
+            <div className="faqsInfo">
+            <h4 className="faqsHeader">{props.name}</h4>
+            <p className="fqsText">{props.text}</p>
+            <button class="helpButton" ><span>Help </span></button>
+            </div>
+        </div>
+        
+        </>
+    )
+}
+function FaqsBannerText(props) {
+    return (
+        <> 
+        <div className="faqsBanner">
+            <h1 >{props.title}</h1>
+            <p >{props.text}</p>
+            </div>        
+        </>
+    )
+}
 
 export{ Card,
         FindFlightsCard,
         DestinationCard,
         ViewBookedFlightsLogIn,
-        PeopleCard,
-        FaqCard
+        AboutUsCard,
+        TopCard,
+        AboutUsCardBannerText,
+        ContactUsCard,
+        FaqCard,
+        FaqsCard,
+        FaqsBannerText
 }
