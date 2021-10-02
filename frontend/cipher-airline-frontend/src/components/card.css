@@ -127,7 +127,7 @@ line-height: 5%;
 .AboutUsTopCardTitle {
   font-weight: bold;
   font-size: 80px;  
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px rgba(23, 3, 97, 0.918);
   line-height: 5%;
 }
 
