@@ -4,12 +4,10 @@ import React from 'react'
 function Card(props) {
     return (
         <div className="card" styles="width: 18rem;">
-            <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolamites" />
-            {/* <div className ="card-body">
-                <h5 className ="card-title">{props.title}</h5>
-                <p className ="card-text">{props.text}</p>
-                <a href="#" className ="btn btn-primary">{props.buttonText}</a>
-            </div> */}
+            <img src={props.imageSrc} className="card-img-top" alt="Hongkong city skyline in the evening" />
+            <div className ="card-body">
+                <h1 className ="card-title">{props.title1} <br/> {props.title2}</h1>
+            </div>
         </div>
     )
 }
@@ -17,16 +15,17 @@ function Card(props) {
 function FindFlightsCard(props) {
     return (
         <div className="findFlightsCard" styles="width: 18rem;">
-            {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolomites" /> */}
             <h5 className ="findFlightsCar-title">{props.title}</h5>
-            <div className ="findFlightsCard-body">
-                <form>
-                    <input id='findFlightsInput' type="text" placeholder="Enter destination" />
-                    <button type="submit">Search</button>
-                </form>
+
+            <form>
+                <input type="text" name="destination" autocomplete="off" required />
+                <label for="destination" class="label-destination">
+                    <span class="content-destination">Destination</span>
+                </label>
+                {/* <button type="submit">Search</button> */}
+            </form>
                 {/* <p className ="findFlightsCar-text">{props.text}</p> 
                 <a href="#" className ="btn btn-primary">{props.buttonText}</a>*/}
-            </div>
         </div>
     )
 }

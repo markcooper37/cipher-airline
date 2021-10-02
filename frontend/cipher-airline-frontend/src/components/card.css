@@ -1,29 +1,39 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    /* border-radius: 0px; */
-    background-color: whitesmoke;
-    /* margin: 3rem; */
+    background-color: transparent;
+    position: relative;
 }
  
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
 }
+
  
-/* .contents-card {
-    padding: 5%;
-} */
+.card-body {
+    position: absolute;
+    bottom: 400px;
+    right:50px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;   
+}
+
+.card-body h1 {
+    font-style: italic;
+    font-family: 'Playfair';
+    font-size: 300%;
+}
+
 
 .bookedFlightsLogIn {
-    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
     background-color: rgb(235, 231, 231);
     margin-left: 35rem;
     margin-top: 20rem;
-    
 }
 
 .bookedFlightsCar-title {
@@ -38,30 +48,100 @@
 }
 
 .findFlightsCard {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
-    background-color: rgb(235, 231, 231);
-    margin: 3rem;
-    padding-bottom: 10px;
+    background-color: rgba(228, 228, 228, 0.11);
+    width:50%;
+    align-items: center;
+    align-self: center;
+    margin-left: 25%;
+    transform: translateY(-65%);
+}
+
+.findFlightsCard:hover {
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
+    background-color: rgb(207, 166, 178);
 }
 
 .findFlightsCar-title {
     text-align: center;
-    font-size: 200%;
+    font-size: 250%;
+    padding:2rem;
+    color: white;
+    font-family: 'Playfair';
 }
 
-.findFlightsCard-body {
+.findFlightsCard {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Playfair';
 }
 
-#findFlightsInput {
-    margin-right: 10px;
+.findFlightsCard form {
+    position: relative;
+    height: 50px;
+    background: rgba(240, 248, 255, 0);
+    color: rgb(204, 204, 204);
+    overflow: hidden;
 }
+
+.findFlightsCard form input {
+    width: 100%;
+    height: 100%;
+    padding-top:20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.findFlightsCard form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(219, 212, 212);
+
+}
+
+.findFlightsCard form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -3px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid rgb(197, 97, 127);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-destination {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.findFlightsCard form input:focus + .label-destination .content-destination,
+.findFlightsCard form input:valid + .label-destination .content-destination {
+    transform: translateY(-100%);
+    font-size: 14px;
+    color:rgb(197, 97, 127);
+}
+
+.findFlightsCard form input:focus + .label-destination::after,
+.findFlightsCard form input:valid + .label-destination::after {
+    transform: translateX(0%);
+}
+
 
 .destinationCard {
-
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
@@ -74,16 +154,15 @@
     height: auto;
 }
 
+.destinationCardImage {
+    width: 700px;
+    height: auto;
+}
+
 .destination-card-img {
     width: 700px;
     height:318px;
 }
-
-.people-card-image {
-    width: 500px;
-    height: auto;
-}
-
 .peopleInfo {
     width: 500px;
     padding: 10px;

@@ -1,13 +1,13 @@
 import './homepage.css';
 
 import {Card, FindFlightsCard} from '../components/card.js';
-import Italy from '../resources/dolomites_rectangle.jpg';
+import Hongkong from '../resources/Hongkong2edited.jpeg';
 
 function Homepage() {
 
   return (
     <>
-    <Card imageSrc={Italy} />
+    <Card imageSrc={Hongkong} title1={"Discover Your Dream Destination"} title2={"With Cipher Airlines"}/>
     <FindFlightsCard title="Find Flights" text="Destination" buttonText="Search" />
 
     
