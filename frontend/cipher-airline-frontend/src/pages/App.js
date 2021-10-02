@@ -1,18 +1,17 @@
 //import './App.css';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './homepage.js';
 import ViewDestinations from './viewDestinations.js';
 import Navbar from '../components/navbar.js';
 import AllAvailableFlights from './allAvailableFlights.js';
 import ViewBookingConfirmation from './viewBookingConfirmation.js';
+//import EssayForm from './viewBookingConfirmation.js';
 import ViewBookingDetails from './viewBookingDetails.js';
-import Contact from './contact.js';
-import { useState } from "react";
-
+import AboutUs from './aboutUs.js';
+import ContactUs from './contact.js';
 
 
 function App() {
-
   return (
     <BrowserRouter>
       <Navbar/>
@@ -21,22 +20,13 @@ function App() {
         <Route path="/destinations" component={ViewDestinations} exact />
         <Route path="/all-flights" component={AllAvailableFlights} exact />
         <Route path="/details-confirmation" component={ViewBookingConfirmation} exact />
+        {/* <Route path="/details-confirmation" component={EssayForm} exact /> */}
         <Route path="/booking-details" component={ViewBookingDetails} exact />
-
-
-
-        {/* <Route path="/details-confirmation" exact>
-          <ViewBookingConfirmation useCustomerId={useCustomerId} />
-        </Route> 
-        <Route path="/booking-details" exact >
-          <ViewBookingDetails selector={0} customerId={customerId} />
-        </Route> */}
-        <Route path="/contact" component={Contact} exact />
+        <Route path="/about-us" component={AboutUs} exact />
+        <Route path="/contact-us" component={ContactUs} exact />
       </Switch>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-

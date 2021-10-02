@@ -1,7 +1,6 @@
 import './card.css'
 import React from 'react'
 
-
 function Card(props) {
     return (
         <div className="card" styles="width: 18rem;">
@@ -21,8 +20,12 @@ function FindFlightsCard(props) {
             {/* <img src={props.imageSrc} className="card-img-top" alt="Mountains in Italy, called the Dolomites" /> */}
             <h5 className ="findFlightsCar-title">{props.title}</h5>
             <div className ="findFlightsCard-body">
-                <p className ="findFlightsCar-text">{props.text}</p>
-                <a href="#" className ="btn btn-primary">{props.buttonText}</a>
+                <form>
+                    <input id='findFlightsInput' type="text" placeholder="Enter destination" />
+                    <button type="submit">Search</button>
+                </form>
+                {/* <p className ="findFlightsCar-text">{props.text}</p> 
+                <a href="#" className ="btn btn-primary">{props.buttonText}</a>*/}
             </div>
         </div>
     )
@@ -43,6 +46,22 @@ function DestinationCard(props) {
     )
 }
 
+function PeopleCard(props) {
+    return (
+        <> 
+        <div className="peopleCard">
+            <div className="peopleCardImage">
+                <img src={props.imageSrc} className="people-card-image" alt={props.alt} />
+            </div>
+            <div className="peopleInfo">
+            <h1 className="personName">{props.name}</h1>
+            </div>
+        </div>
+        
+        </>
+    )
+}
+
 function ViewBookedFlightsLogIn(props) {
     return (
         <div className="bookedFlightsLogIn">
@@ -54,23 +73,19 @@ function ViewBookedFlightsLogIn(props) {
     )
 }
 
-
-function FlightInfoCard(props) {
+function FaqCard(props) {
     return (
-        <>
-        <div className="flightInfoCard">
-            <p className="flightInfoText">{props.flightInfo}</p>
+        <div className="FaqCard">
+            <h3>{props.title}</h3>
+            <p>{props.text}</p>
         </div>
-        </>
     )
 }
-
-
-
 
 export{ Card,
         FindFlightsCard,
         DestinationCard,
         ViewBookedFlightsLogIn,
-        FlightInfoCard
+        PeopleCard,
+        FaqCard
 }

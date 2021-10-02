@@ -1,31 +1,31 @@
-import {Card, DestinationCard, FlightInfoCard} from '../components/card.js';
+import {Card, DestinationCard} from '../components/card.js';
 import Italy from '../resources/dolomites_rectangle.jpg';
 import ViewBookingDetailsContainer from '../containers/viewBookingDetailsContainer.js';
 import Japan from '../resources/JapanViewDestination.jpg';
-import React from "react";
+import React, {useState} from "react";
+import ViewBookingsFormContainerCheck from '../containers/viewBookingsFormContainerv2.js';
 
-function ViewBookingDetails(props) {
-  // localStorage.setItem("customerId", customerId)
-  // localStorage.getItem("customerId")
-
+function ViewBookingDetails() {
 
   return (
     <>
       <Card imageSrc={Italy} />
       {/* some kind of heading */}
       <div className ="viewDestinationsHeader">
-        <h1>Countries/terrorities</h1>
+        <h1>View/Manage Bookings</h1>
       </div>
       <div className="viewDestinationsBody">
         <div className="viewDestinationsBodyLeft">
           {/* <DestinationCard name={<ViewBookingDetailsContainer />}/> */}
           {/* {/* <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={0} viewAll = {false}/>}/> */}
-          {/* <FlightInfoCard> 
-            <ViewBookingDetailsContainer selector={0} customerId={props.customerId} /> 
-          <FlightInfoCard />  */}
-          <FlightInfoCard flightInfo={<ViewBookingDetailsContainer selector={0} customerId={3} />} /> 
+          
+          <ViewBookingsFormContainerCheck /> 
         </div>
-        
+        {/* <div className="viewDestinationsBodyRight">
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {true}/>}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {false}/>}/>
+          <DestinationCard imageSrc={Japan} name={<DestinationContainer selector={1} viewAll = {false}/>}/>
+        </div> */}
       
      
         
