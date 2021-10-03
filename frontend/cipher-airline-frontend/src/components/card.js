@@ -12,6 +12,17 @@ function Card(props) {
     )
 }
 
+function Card2(props) {
+    return (
+        <div className="card2" styles="width: 18rem;">
+            <img src={props.imageSrc} className="card-img-top2" alt="Hongkong city skyline in the evening" />
+            <div className ="card-body2">
+                <h1 className ="card-title2">{props.title1} <br/> {props.title2}</h1>
+            </div>
+        </div>
+    )
+}
+
 function FindFlightsCard(props) {
     return (
         <div className="findFlightsCard" styles="width: 18rem;">
@@ -83,6 +94,7 @@ function FaqCard(props) {
 
 export{ Card,
         FindFlightsCard,
+        Card2,
         DestinationCard,
         ViewBookedFlightsLogIn,
         PeopleCard,

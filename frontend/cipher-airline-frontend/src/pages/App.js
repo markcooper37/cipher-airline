@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Homepage from './homepage.js';
 import ViewDestinations from './viewDestinations.js';
-import Navbar from '../components/navbar.js';
+import {Navbar} from '../components/navbar.js';
+import NavSlide from '../components/navslide.js';
 import AllAvailableFlights from './allAvailableFlights.js';
 import ViewBookingDetails from './viewBookingDetails.js';
 import AboutUs from './aboutUs.js';
