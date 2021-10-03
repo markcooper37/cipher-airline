@@ -14,7 +14,7 @@
 
 }
 
-.contactus {
+.contactUsBody {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,4 +24,31 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.faqsRight {
+    display: flex;
+    align-items: right;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.faqsCentre {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.faqsLeft {
+    display: flex;
+    align-items: left;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+
 }
