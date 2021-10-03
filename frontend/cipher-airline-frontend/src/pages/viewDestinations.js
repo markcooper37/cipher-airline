@@ -1,7 +1,7 @@
 import './viewDestinations.css';
 
 import {Card, DestinationCard} from '../components/card.js';
-import Italy from '../resources/dolomites_rectangle.jpg';
+import Hongkong from '../resources/Hongkong2edited.jpeg';
 import DestinationContainer from '../containers/destinationContainer.js';
 import React from "react";
 
@@ -9,18 +9,11 @@ import React from "react";
 function viewDestinations() {
   return (
     <>
-      <Card imageSrc={Italy} />
-      <div className ="viewDestinationsHeader">
-        <h1>Countries/terrorities</h1>
-      </div>
+      <Card imageSrc={Hongkong} title1={"Discover your Dream Destination"} title2={"with Cipher Airlines"} />
       <div className="viewDestinationsBody">
           <DestinationContainer selector={0} viewAll={true}/>
       </div>
-      
-
-      
     </>
-
   );
 }
 

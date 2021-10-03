@@ -43,6 +43,22 @@ function FindFlightsCard(props) {
     )
 }
 
+function ViewBookedFlights(props) {
+    return(
+        <div className="findFlightsCard" styles="width: 18rem;">
+            <h5 className="findFlightsCar-title">{props.title}</h5>
+
+            <form onSubmit={props.handlesubmit}>
+                <input type='text'name="customer id" autocomplete="off" value={props.value} onChange={props.handlechange} placeholder={props.customerId} />
+                <input type="submit" value="Submit" />
+                <label for="customer id" class="label-destination">
+                    <span class="content-destination">Customer ID</span>
+                </label>
+            </form>
+        </div>
+    )
+}
+
 function DestinationCard(props) {
     return (
         <>
@@ -236,6 +252,7 @@ export{ Card,
         Card2,
         DestinationCard,
         ViewBookedFlightsLogIn,
+        ViewBookedFlights,
         PeopleCard,
         FaqCard,
         AboutUsCard,
