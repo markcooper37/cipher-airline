@@ -204,10 +204,11 @@
     width: 400px;
     height: 400px;
     background-color: transparent;
+    overflow: hidden;
 }
 
 .destinationCard h1 {
-    transform: translateY(-250%);
+    transform: translateY(-400%);
     left:50px;
     color:white;
     font-family: 'Playfair';
@@ -215,8 +216,9 @@
 
 .destinationCardImage {
     width: 400px;
-    height: auto;
+    height: 400px;
     opacity: 0.7;
+    overflow: hidden;
 }
 
 
