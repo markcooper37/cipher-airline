@@ -97,6 +97,17 @@ function AboutUsCardBannerText(props) {
     )
 }
 
+// function Card(props) {
+//     return (
+//         <div className="card" styles="width: 18rem;">
+//             <img src={props.imageSrc} className="card-img-top" alt="Hongkong city skyline in the evening" />
+//             <div className ="card-body">
+//                 <h1 className ="card-title">{props.title1} <br/> {props.title2}</h1>
+//             </div>
+//         </div>
+//     )
+// }
+
 
 function AboutUsCard(props) {
     return (
@@ -106,14 +117,9 @@ function AboutUsCard(props) {
                 <img src={props.imageSrc} className="aboutUs-card-image" alt={props.alt} />
             </div>
             <div className="aboutUsInfo">
-            <h4 className="aboutUsInfoHeader">{props.name}</h4>
-            <p className="aboutUsInfoText">{props.text}</p>
-            <p className="aboutUsInfoText">{props.text1}</p>
-            <p className="aboutUsInfoText">{props.text2}</p>
-
-
-            <button class="moreButton" ><span>More </span></button>
-
+                <h4 className="aboutUsInfoHeader">{props.name}</h4>
+                <p className="aboutUsInfoText">{props.text} <br/> {props.text1} <br/> {props.text3}</p>
+                <button class="moreButton" ><span>More </span></button>
             </div>
         </div>
         

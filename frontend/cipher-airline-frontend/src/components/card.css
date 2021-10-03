@@ -235,22 +235,36 @@
 
 
 .aboutUs-card-image {
-    width: 500px;
-    height: auto;
+    width: 1265px;
+    height: 500px;
+    opacity: 0.3;
+}
+
+.aboutUs-card-image:hover {
+    width: 1265px;
+    height: 500px;
+    opacity: 0.8;
 }
 
 .aboutUsInfo{
     width: 500px;
-    padding: 10px;
+    margin-left:250px;
     text-align: justify;
     text-justify: inter-word;
+    z-index: 10;
+    position: absolute;
+    color: white;
+    font-family: 'Playfair';
+    width: 45rem;
+    transform: translateY(100%);
 }
 
 .aboutUsInfoHeader{
     font-weight: bold;
-    color: rgb(118, 104, 129);
-
-
+    font-size: 450%;
+    color: white;
+    font-family: 'Playfair';
+    text-align: center;
 }
 
 .aboutUsCard {
@@ -258,10 +272,10 @@
     box-shadow: 0 8px 8px 0 rgba(68, 33, 192, 0.2);
     transition: 0.3s;
     border-radius: 0px;
-    background-color: white;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-top: 3px solid rgb(89, 3, 187);
+    background-color: rgba(255, 255, 255, 0.323);
+    /* border-top: 3px solid rgb(89, 3, 187); */
+    width: 1262px;
+    border: none;
 
 }
 
@@ -504,10 +518,10 @@ padding-top: 5%;
 
 }
 .moreButton {
-  display: inline-block;
+  display: relative;
   border-radius: 4px;
   /* background-color: rgba(68, 33, 192, 0.2); */
-  background-color:rgba(67, 33, 192, 0.575);
+  background-color:rgba(243, 145, 222, 0.432);
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -517,7 +531,9 @@ padding-top: 5%;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  transform: translateX(390%);
 }
+
 .moreButton span {
   cursor: pointer;
   display: inline-block;
@@ -543,8 +559,7 @@ padding-top: 5%;
   right: 0;
 }
 .moreButton:hover {    
-/* background-color:rgba(67, 33, 192, 0.575) */
-background-color: rgba(68, 33, 192, 0.2);
+background-color: rgba(228, 83, 163, 0.473);
 
 }
 
