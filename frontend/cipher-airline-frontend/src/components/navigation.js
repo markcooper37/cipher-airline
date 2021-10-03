@@ -2,7 +2,7 @@ import NavLinks from "./navLinks";
 import './navbar.css';
 
 
-const Navigation = () => {
+function Navigation() {
     return(
         <nav class="Navigation">
             <NavLinks/>

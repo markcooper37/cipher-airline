@@ -1,6 +1,5 @@
 import React from 'react';
 import './navbar.css';
-import "bootstrap/dist/css/bootstrap.min.css"
 import MobileNavigation from './mobileNavigation.js';
 import Navigation from './navigation.js';
 
@@ -11,7 +10,7 @@ function Navbar() {
             <Navigation/>
             <MobileNavigation/>
         </div>
-)
+    )
 }
 
 
