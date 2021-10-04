@@ -17,14 +17,14 @@ const BookingDetailsCheck = (props) => {
         </BookedFlights> */}
 
             <p>Flight ID: {props.bookingDetails.value0}</p>
-            <p>{props.bookingDetails.value1}</p>
-            <p>{props.bookingDetails.value2}</p>
-            <p>{props.bookingDetails.value3}</p>
-            <p>{props.bookingDetails.value4}</p>
-            <p>{props.bookingDetails.value5}</p>
-            <p>{props.bookingDetails.value6}</p>
-            <p>{props.bookingDetails.value7}</p>
-            <p>{props.bookingDetails.value8}</p>
+            <p>Customer Flight Number: {props.bookingDetails.value1}</p>
+            <p>Country Name: {props.bookingDetails.value2}</p>
+            <p> Depature Time: {props.bookingDetails.value3}</p>
+            <p>Arrival Time: {props.bookingDetails.value4}</p>
+            <p>Number of Passengers you've booked: {props.bookingDetails.value5}</p>
+            <p>Return Departure Time: {props.bookingDetails.value6}</p>
+            <p>Return Arrival Time: {props.bookingDetails.value7}</p>
+            <p>Total Price: {props.bookingDetails.value8}</p>
         
         </>
     )
