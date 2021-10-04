@@ -203,15 +203,27 @@
     border-radius: 25px;
     width: 400px;
     height: 400px;
-    background-color: transparent;
+    background-color: rgba(212, 203, 203, 0.637);
     overflow: hidden;
 }
 
-.destinationCard h1 {
+.destinationCardInfo h1 {
     transform: translateY(-400%);
     left:50px;
     color:white;
     font-family: 'Playfair';
+}
+
+.destinationCardInfo {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    margin: 3rem;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(212, 203, 203, 0.637);
+    overflow: hidden;
 }
 
 .destinationCardImage {

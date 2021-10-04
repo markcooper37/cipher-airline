@@ -64,7 +64,7 @@ function DestinationCard(props) {
         <>
         <div className="destinationCard">
             <div className="destinationCardImage">
-                <img src={props.imageSrc} className="destination-card-img" alt="Mountains in Italy, called the Dolamites" />
+                <img src={props.imageSrc} className="destination-card-img" alt="" />
             </div>
             <h1 className="destinationName">{props.name}</h1>
         </div>
@@ -72,6 +72,13 @@ function DestinationCard(props) {
 
         </>
     )
+}
+
+function DestinationCardInfo(props) {
+    return (
+        <h1 className="destinationName">{props.name}</h1>
+    )
+    
 }
 
 function PeopleCard(props) {
@@ -112,17 +119,6 @@ function AboutUsCardBannerText(props) {
         </>
     )
 }
-
-// function Card(props) {
-//     return (
-//         <div className="card" styles="width: 18rem;">
-//             <img src={props.imageSrc} className="card-img-top" alt="Hongkong city skyline in the evening" />
-//             <div className ="card-body">
-//                 <h1 className ="card-title">{props.title1} <br/> {props.title2}</h1>
-//             </div>
-//         </div>
-//     )
-// }
 
 
 function AboutUsCard(props) {
@@ -251,6 +247,7 @@ export{ Card,
         FindFlightsCard,
         Card2,
         DestinationCard,
+        DestinationCardInfo,
         ViewBookedFlightsLogIn,
         ViewBookedFlights,
         PeopleCard,
