@@ -59,6 +59,24 @@ function ViewBookedFlights(props) {
     )
 }
 
+function BookedFlights(props) {
+    return(
+        <div className="booked-flights-card">
+            <p>
+                Flight ID: {props.line1}<br/>
+                Customer Flight Number: {props.line2}<br/>
+                Country Name: {props.line3}<br/>
+                Depature Time: {props.line4}<br/>
+                Arrival Time: {props.line5}<br/>
+                Number of Passengers you've booked: {props.line6}<br/>
+                Return Departure Time: {props.line7}<br/>
+                Return Arrival Time: {props.line8}<br/>
+                Total Price: {props.line9}<br/>
+            </p>
+        </div>
+    )
+}
+
 function DestinationCard(props) {
     return (
         <>
@@ -250,6 +268,7 @@ export{ Card,
         DestinationCardInfo,
         ViewBookedFlightsLogIn,
         ViewBookedFlights,
+        BookedFlights,
         PeopleCard,
         FaqCard,
         AboutUsCard,

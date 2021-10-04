@@ -1,4 +1,4 @@
-import {Card, DestinationCard} from '../components/card.js';
+import {Card} from '../components/card.js';
 import Hongkong from '../resources/Hongkong2edited.jpeg';
 import React from "react";
 import ViewBookingsFormContainerCheck from '../containers/viewBookingsFormContainerv2.js';
