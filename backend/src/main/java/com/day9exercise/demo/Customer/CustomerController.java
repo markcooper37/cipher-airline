@@ -23,8 +23,8 @@ public record CustomerController(CustomerService customerService) {
     }
 
     @GetMapping(path = "/greetCustomer")
-    public void greetCustomer(String customerPassport) {
-        customerService.greetCustomer(customerPassport);
+    public String greetCustomer(@RequestParam String customerPassport) {
+        return (customerService.greetCustomer(customerPassport));
     }
 
 

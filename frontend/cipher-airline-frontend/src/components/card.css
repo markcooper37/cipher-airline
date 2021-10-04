@@ -1,29 +1,85 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    /* border-radius: 0px; */
-    background-color: whitesmoke;
-    /* margin: 3rem; */
+    background-color: transparent;
+    position: relative;
+    transform: translateY(-10%);
+    width:100%;
+}
+
+.card-img-top {
+    width:1265px;
 }
  
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
 }
+
  
-/* .contents-card {
-    padding: 5%;
-} */
+.card-body {
+    position: absolute;
+    bottom: 300px;
+    right:50px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px; 
+    background-color: transparent;  
+}
+
+.card-body h1 {
+    font-style: italic;
+    font-family: 'Playfair';
+    font-size: 300%;
+}
+
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: transparent;
+    position: relative;
+    transform: translateY(-11.5%);
+    z-index: 1;
+    height: 619px;
+    overflow:hidden;
+}
+ 
+/* On mouse-over, add a deeper shadow */
+.card2:hover {
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
+}
+
+ 
+.card-body2{
+    position: relative;
+    bottom: 200px;
+    right:20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px; 
+    background-color: transparent;  
+}
+
+.card-title2 {
+    font-style: italic;
+    font-family: 'Playfair';
+    font-size: 300%;
+    z-index: 3;
+}
+
+.card-img-top2 {
+    width: 1265px;
+    height: auto;
+}
+
 
 .bookedFlightsLogIn {
-    
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
     background-color: rgb(235, 231, 231);
     margin-left: 35rem;
     margin-top: 20rem;
-    
 }
 
 .bookedFlightsCar-title {
@@ -38,52 +94,153 @@
 }
 
 .findFlightsCard {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
-    background-color: rgb(235, 231, 231);
-    margin: 3rem;
-    padding-bottom: 10px;
+    background-color: rgba(228, 228, 228, 0.021);
+    width:50%;
+    align-items: center;
+    align-self: center;
+    margin-left: 25%;
+    transform: translateY(-90%);
+    z-index: 100;
+    position: absolute;
+}
+
+.findFlightsCard:hover {
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
+    background-color: rgb(207, 166, 178);
 }
 
 .findFlightsCar-title {
     text-align: center;
-    font-size: 200%;
+    font-size: 250%;
+    padding:2rem;
+    color: white;
+    font-family: 'Playfair';
 }
 
-.findFlightsCard-body {
+.findFlightsCard {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Playfair';
+    overflow: hidden;
 }
 
-#findFlightsInput {
-    margin-right: 10px;
+.findFlightsCard form {
+    position: relative;
+    height: 50px;
+    background: rgba(240, 248, 255, 0);
+    color: rgb(99, 96, 96);
+    overflow: hidden;
 }
+
+.findFlightsCard form input {
+    width: 100%;
+    height: 100%;
+    padding-top:10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    color:white;
+}
+
+
+.findFlightsCard form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(99, 96, 96);
+    overflow: hidden;
+
+}
+
+.findFlightsCard form label::after {
+    content: "";
+    position: fixed;
+    left: 0px;
+    bottom: -3px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: hidden;
+}
+
+.content-destination {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.findFlightsCard form input:focus + .label-destination .content-destination,
+.findFlightsCard form input:valid + .label-destination .content-destination {
+    transform: translateY(-100%);
+    font-size: 14px;
+    color:rgb(255, 255, 255);
+}
+
+.findFlightsCard form input:focus + .label-destination::after,
+.findFlightsCard form input:valid + .label-destination::after {
+    transform: translateX(0%);
+    color:white;
+}
+
 
 .destinationCard {
-
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 0px;
-    background-color: whitesmoke;
     margin: 3rem;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(212, 203, 203, 0.637);
+    overflow: hidden;
+}
+
+.destinationCardInfo h1 {
+    transform: translateY(-400%);
+    left:50px;
+    color:white;
+    font-family: 'Playfair';
+}
+
+.destinationCardInfo {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    margin: 3rem;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(212, 203, 203, 0.637);
+    overflow: hidden;
 }
 
 .destinationCardImage {
-    width: 700px;
-    height: auto;
+    width: 400px;
+    height: 400px;
+    opacity: 0.7;
+    overflow: hidden;
 }
+
 
 .destination-card-img {
     width: 700px;
     height:318px;
 }
 
-.people-card-image {
-    width: 500px;
-    height: auto;
-}
 
+/* need to check and edit */
 .peopleInfo {
     width: 500px;
     padding: 10px;
@@ -97,4 +254,378 @@
     background-color: whitesmoke;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+
+.aboutUs-card-image {
+    width: 1265px;
+    height: 500px;
+    opacity: 0.3;
+}
+
+.aboutUs-card-image:hover {
+    width: 1265px;
+    height: 500px;
+    opacity: 0.8;
+}
+
+.aboutUsInfo{
+    width: 500px;
+    margin-left:250px;
+    text-align: justify;
+    text-justify: inter-word;
+    z-index: 10;
+    position: absolute;
+    color: white;
+    font-family: 'Playfair';
+    width: 45rem;
+    transform: translateY(100%);
+}
+
+.aboutUsInfoHeader{
+    font-weight: bold;
+    font-size: 450%;
+    color: white;
+    font-family: 'Playfair';
+    text-align: center;
+}
+
+.aboutUsCard {
+    display:flex;
+    box-shadow: 0 8px 8px 0 rgba(68, 33, 192, 0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.323);
+    /* border-top: 3px solid rgb(89, 3, 187); */
+    width: 1262px;
+    border: none;
+
+}
+
+/* ---------------------------------------------------------------------------------------------------- new top card, called about us banner ... */
+
+.banner-about-us {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: transparent;
+    position: relative;
+    transform: translateY(-10%);
+    width:100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.banner-about-us-img-top {
+    width:1265px;
+}
+ 
+/* On mouse-over, add a deeper shadow */
+.banner-about-us:hover {
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
+}
+
+ 
+.banner-about-us-body {
+    position: absolute;
+    bottom: 50px;
+    right:400px;
+    color: rgb(240, 240, 240);
+
+    background-color: transparent;  
+}
+
+.banner-about-us-body h1 {
+    /* font-style: italic; */
+    font-family: 'Playfair';
+    font-size: 300%;
+    text-align: center;
+}
+
+.banner-about-us-body p {
+    font-style: italic;
+    font-family: 'Playfair';
+    font-size: 150%;
+    text-align: center;
+}
+
+.about-us-nav {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 12vh;
+    background-color: transparent;
+    font-family: 'Playfair';
+    z-index: 500;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-82%);
+    
+    background-color: rgba(150, 163, 207, 0.282);
+}
+    
+.about-us-nav:hover {
+    position: absolute;
+    background-color: rgba(150, 163, 207, 0.522);
+}
+
+.links-to-diff-page-sections {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.links-to-diff-page-sections li{
+    list-style: none;
+    align-items: center;
+    text-align: center;
+}
+
+.links-to-diff-page-sections a{
+    color:rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.links-to-diff-page-sections a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(216, 207, 126);
+ }
+
+@media screen and (max-width:1024px) {
+    .nav-links{
+        width: 60%;
+        align-items:center;
+        align-content: center;
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+.aboutUsTopCardInfo p,
+.aboutUsTopCardInfo h1 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 5%; 
+
+
+} 
+
+.AboutUsTopCardText {
+font-style: italic;
+line-height: 5%;
+
+
+}
+.AboutUsTopCardTitle {
+  font-weight: bold;
+  font-size: 80px;  
+  text-shadow: 2px 2px 4px rgba(23, 3, 97, 0.918);
+  line-height: 5%;
+}
+
+
+.aboutUsTopCardInfo{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-top: 5%;
+
+}
+
+.aboutUsCardBanner {
+    display:flex;
+    box-shadow: 0 8px 8px 0 rgba(68, 33, 192, 0.2);
+    border-radius: 0px;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    padding:10px;
+    text-align: center;
+    text-justify: inter-word;
+    color: rgb(118, 104, 129);
+    font-weight: bold;
+    text-align: justify;
+    text-justify: inter-word;
+    border-bottom: 3px solid rgb(129, 11, 119);
+
+}
+.faqsCard {
+    box-shadow: 0 8px 8px 0 rgba(68, 33, 192, 0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: 3px solid rgb(89, 3, 187);
+    width: 286px;
+    height: 300px;
+
+
+}
+.faqs-card-image {
+    width: 286px;
+    height: 180px;
+}
+
+.faqsInfo{
+    
+    /* width: 500px;
+    padding: 10px;
+    text-align: justify;
+    text-justify: inter-word; */
+}
+
+.faqsHeader{
+    font-weight: bold;
+    color: rgb(118, 104, 129);
+}
+
+.faqsBanner {
+    display:flex;
+    box-shadow: 0 8px 8px 0 rgba(68, 33, 192, 0.2);
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    height: 60px;
+    padding:10px;
+    color: rgb(118, 104, 129);
+    font-weight: bold;
+    font-size: 4000px;
+    border-bottom: 3px solid rgb(129, 11, 119);
+
+}
+.contactUs-card-image {
+    width: 500px;
+    height: auto;
+}
+
+.contactUsInfo{
+    width: 500px;
+    padding: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.contactUsInfoHeader{
+    font-weight: bold;
+    color: rgb(118, 104, 129);
+}
+
+.contactUsCard {
+    display:flex;
+    box-shadow: 0 8px 8px 0 rgba(68, 33, 192, 0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: 3px solid rgb(89, 3, 187);
+
+}
+.moreButton {
+  display: relative;
+  border-radius: 4px;
+  /* background-color: rgba(68, 33, 192, 0.2); */
+  background-color:rgba(243, 145, 222, 0.432);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 3px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  transform: translateX(390%);
+}
+
+.moreButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.moreButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.moreButton:hover span {
+  padding-right: 25px;
+}
+
+.moreButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.moreButton:hover {    
+background-color: rgba(228, 83, 163, 0.473);
+
+}
+
+.helpButton {
+  display: inline-block;
+  border-radius: 4px;
+  /* background-color: rgba(68, 33, 192, 0.2); */
+  background-color: rgba(68, 33, 192, 0.2);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 3px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.helpButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.helpButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.helpButton:hover span {
+  padding-right: 25px;
+}
+
+.helpButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.helpButton:hover {    
+/* background-color:rgba(67, 33, 192, 0.575) */
+  background-color:rgba(67, 33, 192, 0.575);
 }

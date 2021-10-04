@@ -1,6 +1,6 @@
 import React from "react";
 import BookingDetailsListCheck from "../components/viewBookingDetailsListv2";
-
+import { ViewBookedFlights } from "../components/card";
 class ViewBookingsFormContainerCheck extends React.Component {
 
     constructor(props) {
@@ -37,10 +37,11 @@ class ViewBookingsFormContainerCheck extends React.Component {
       render() {
           return(
               <div>
-                  <form onSubmit={this.handleSubmit}>
+                  <ViewBookedFlights title="Find Flights" text="Destination" buttonText="Search" handlesubmit={this.handleSubmit} value={this.state.value} handlechange={this.handleChange} />
+                  {/* <form onSubmit={this.handleSubmit}>
                     <input type='text' value={this.state.value} onChange={this.handleChange} placeholder='Customer Id' />
                     <input type='submit' value='Submit' />
-                  </form>
+                  </form> */}
                   <BookingDetailsListCheck bookingsInformation={this.state.flights}></BookingDetailsListCheck>
               </div>
           )

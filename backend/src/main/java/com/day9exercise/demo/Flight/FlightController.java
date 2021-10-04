@@ -31,8 +31,8 @@ public record FlightController(FlightService flightService) {
         return(flightService.viewCustomerFlight(customerId));
     }
 
-    @PostMapping
-    public void addNewFlight(Flight flight){
+    @PostMapping("/make-booking")
+    public void addNewFlight(@RequestBody Flight flight){
         flightService.addNewFlight(flight);
     }
 

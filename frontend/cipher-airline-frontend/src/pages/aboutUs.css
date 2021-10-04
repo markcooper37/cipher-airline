@@ -1,10 +1,34 @@
+.aboutUs {
+    background-image: url('../resources/AboutUsBackground.jpg');
+    z-index: 0;
+}
+
+
 .aboutUsBody {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.aboutUsText {
+
+
+/* .aboutUsText {
     align-items: left;
     width: 1000px;
 }
+.aboutUsSlogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUsHeader {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.meetOurPeople {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
