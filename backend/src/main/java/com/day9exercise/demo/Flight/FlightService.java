@@ -5,6 +5,8 @@ import com.day9exercise.demo.Customer.CustomerRepositoryPostgres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.javatuples.Ennead;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -33,15 +35,15 @@ public class FlightService {
     }
 
 
-    public ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
-                            AtomicInteger, AtomicReference, AtomicReference, AtomicReference>> viewCustomerFlight(int customerId){
+    public ArrayList<Ennead<Integer, String, String, LocalDateTime, LocalDateTime, Integer, LocalDateTime, LocalDateTime, Double>> viewCustomerFlight(int customerId){
 
 
-        ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
+        /* ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
                   AtomicInteger, AtomicReference, AtomicReference, AtomicReference>> bookedFlightsDetails = new ArrayList<Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
-                                                                                                                                 AtomicInteger, AtomicReference, AtomicReference, AtomicReference>>();
+                                                                                                                                 AtomicInteger, AtomicReference, AtomicReference, AtomicReference>>(); */
+        ArrayList<Ennead<Integer, String, String, LocalDateTime, LocalDateTime, Integer, LocalDateTime, LocalDateTime, Double>> bookedFlightsDetails = new ArrayList<>();
 
-        AtomicInteger flightId = new AtomicInteger();
+        /* AtomicInteger flightId = new AtomicInteger();
         AtomicReference<String> customerFlightNumber = new AtomicReference<>();
         AtomicReference<String> countryName = new AtomicReference<>();
         AtomicReference<LocalDateTime> departureTime = new AtomicReference<>();
@@ -49,10 +51,11 @@ public class FlightService {
         AtomicInteger numberOfPassengers = new AtomicInteger();
         AtomicReference<LocalDateTime> returnArrivalTime = new AtomicReference<>();
         AtomicReference<LocalDateTime> returnDepartureTime = new AtomicReference<>();
-        AtomicReference<Double> totalPrice = new AtomicReference<>();
+        AtomicReference<Double> totalPrice = new AtomicReference<>(); */
 
-
-
+        AtomicReference<String> countryName = new AtomicReference<>();
+        AtomicReference<LocalDateTime> departureTime = new AtomicReference<>();
+        AtomicReference<LocalDateTime> arrivalTime = new AtomicReference<>();
 
         customerRepositoryPostgres.findById(customerId)
                 .ifPresentOrElse(customer -> {
@@ -66,45 +69,64 @@ public class FlightService {
 
         flightRepositoryPostgres.findAllByCustomersId(customerId)
                 .stream().allMatch(flight -> {
-                    if(flight.getCustomersId() == customerId){
-                        flightId.set(flight.getFlightId());
-                        customerFlightNumber.set(flight.getCustomerFlightNumber());
-                        System.out.println("Your flight id is: " + flight.getFlightId());
-                        System.out.println("Your flight number is: " + flight.getCustomerFlightNumber());
+                            if(flight.getCustomersId() == customerId){
+                                Integer flightId = flight.getFlightId();
+                                String customerFlightNumber = flight.getCustomerFlightNumber();
+                        /* flightId.set(flight.getFlightId());
+                        customerFlightNumber.set(flight.getCustomerFlightNumber()); */
+                                System.out.println("Your flight id is: " + flight.getFlightId());
+                                System.out.println("Your flight number is: " + flight.getCustomerFlightNumber());
 
-                        countryRepositoryPostgres.findById(flight.getCountryId())
-                                .ifPresentOrElse(country -> {
-                                    countryName.set(country.getName());
+                                countryRepositoryPostgres.findById(flight.getCountryId())
+                                        .ifPresentOrElse(country -> {
+
+                                            countryName.set(country.getName());
+                                            departureTime.set(country.getTimeDeparture());
+                                            arrivalTime.set(country.getTimeArrival());
+                                    /* countryName.set(country.getName());
                                     departureTime.set(country.getTimeDeparture());
-                                    arrivalTime.set(country.getTimeArrival());
-                                    System.out.println("Destination: " + country.getName());
-                                    System.out.println("Expected Departure time: " + country.getTimeDeparture());
-                                    System.out.println("Expected Arrival time: " + country.getTimeArrival());
-                                }, () -> {
-                                    System.out.println("Sorry we could not find your country id");
-                                });
-                        numberOfPassengers.set(flight.getNumberOfPassenger());
+                                    arrivalTime.set(country.getTimeArrival()); */
+                                            System.out.println("Destination: " + country.getName());
+                                            System.out.println("Expected Departure time: " + country.getTimeDeparture());
+                                            System.out.println("Expected Arrival time: " + country.getTimeArrival());
+                                        }, () -> {
+                                            System.out.println("Sorry we could not find your country id");
+                                        });
+                                Integer numberOfPassengers = flight.getNumberOfPassenger();
+                                LocalDateTime returnTimeDeparture = flight.getReturnTimeDeparture();
+                                LocalDateTime returnTimeArrival = flight.getReturnTimeDeparture();
+                                Double totalPrice = flight.getTotalPrice();
+                        /* numberOfPassengers.set(flight.getNumberOfPassenger());
                         returnDepartureTime.set(flight.getReturnTimeDeparture());
                         returnArrivalTime.set(flight.getReturnTimeArrival());
-                        totalPrice.set(flight.getTotalPrice());
-                        System.out.println("Total amount of passenger: " + flight.getNumberOfPassenger());
-                        System.out.println("Return expected departure time: " + flight.getReturnTimeDeparture());
-                        System.out.println("Return expected ticket arrival time: " + flight.getReturnTimeArrival());
-                        System.out.println("Total price £" + flight.getTotalPrice() + "\n\n");
-                    } else {
-                        System.out.println("We were unable to find any customer id matches");
-                    }
+                        totalPrice.set(flight.getTotalPrice()); */
+                                System.out.println("Total amount of passenger: " + flight.getNumberOfPassenger());
+                                System.out.println("Return expected departure time: " + flight.getReturnTimeDeparture());
+                                System.out.println("Return expected ticket arrival time: " + flight.getReturnTimeArrival());
+                                System.out.println("Total price £" + flight.getTotalPrice() + "\n\n");
 
-                    Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
+                                String newCountryName = countryName.get();
+                                LocalDateTime newDepartureTime = departureTime.get();
+                                LocalDateTime newArrivalTime = arrivalTime.get();
+
+                                Ennead<Integer, String, String, LocalDateTime, LocalDateTime, Integer, LocalDateTime, LocalDateTime, Double> customerFlightDetails = new Ennead<>(flightId, customerFlightNumber, newCountryName, newDepartureTime, newArrivalTime, numberOfPassengers, returnTimeDeparture, returnTimeArrival, totalPrice);
+                                bookedFlightsDetails.add(customerFlightDetails);
+
+                            } else {
+                                System.out.println("We were unable to find any customer id matches");
+                            }
+
+                    /* Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference,
                             AtomicInteger, AtomicReference, AtomicReference, AtomicReference> customerFlightDetails = new Ennead<AtomicInteger, AtomicReference, AtomicReference, AtomicReference, AtomicReference, AtomicInteger,
                             AtomicReference, AtomicReference, AtomicReference>(flightId, customerFlightNumber, countryName, departureTime, arrivalTime,
                             numberOfPassengers, returnDepartureTime, returnArrivalTime, totalPrice);
+                    bookedFlightsDetails.add(customerFlightDetails); */
 
-                    bookedFlightsDetails.add(customerFlightDetails);
 
 
-                    return true;
-                }
+
+                            return true;
+                        }
                 );
 
         return bookedFlightsDetails;
@@ -147,13 +169,13 @@ public class FlightService {
                                     break;
                                 case 3:
                                     break;
-                                    default:
-                                            System.out.println("Please select a valid option");
-                                            updateFlight(customerFlightId);
-                                    }
-                                }, () -> {
-                                    System.out.println("Unable to find country by id.");
-                                });
+                                default:
+                                    System.out.println("Please select a valid option");
+                                    updateFlight(customerFlightId);
+                            }
+                        }, () -> {
+                            System.out.println("Unable to find country by id.");
+                        });
             }
         });
     };
