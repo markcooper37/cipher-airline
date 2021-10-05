@@ -1,4 +1,5 @@
 import {useState} from "react";
+import BookingFlight from './bookingFlight.css';
 
 const NewBooking = (props) => {
 
@@ -76,32 +77,34 @@ const NewBooking = (props) => {
     })
 
     return (
-        <form onSubmit={onFlightSubmission}>
-            <label for="countryId">Country Id:</label>
-            <input type="number" id="countryId" name="countryId" value={countryId} onChange={onCountryIdChange}/>
+        <div class="book-flights-form">
+            <form onSubmit={onFlightSubmission}>
+                <label for="countryId">Country Id:</label>
+                <input type="number" id="countryId" name="countryId" value={countryId} onChange={onCountryIdChange}/>
+                
+                <label for="customersId">Customer Id:</label>
+                <input type="number" id="customersId" name="customersId" value={customersId} onChange={onCustomersIdChange}/>
+                
+                <label for="withReturnTicket">Return Ticket:</label>
+                <input type="checkbox" id="withReturnTicket" name="withReturnTicket" min="0" value={withReturnTicket} onChange={onReturnTicketChange}/>
+                
+                <label for="returnTimeDeparture">Return Time Departure:</label>
+                <input type="Text" id="returnTimeDeparture" name="returnTimeDeparture" min="0" value={returnTimeDeparture} onChange={onReturnTimeDepartureChange}/>
             
-            <label for="customersId">Customer Id:</label>
-            <input type="number" id="customersId" name="customersId" value={customersId} onChange={onCustomersIdChange}/>
+                <label for="returnTimeArrival">Return Time Arrival:</label>
+                <input type="Text" id="returnTimeArrival" name="returnTimeArrival" min="0" value={returnTimeArrival} onChange={onReturnTimeArrivalChange}/>
             
-            <label for="withReturnTicket">Return Ticket:</label>
-            <input type="checkbox" id="withReturnTicket" name="withReturnTicket" min="0" value={withReturnTicket} onChange={onReturnTicketChange}/>
+                <label for="numberOfPassenger">Number of Passengers:</label>
+                <input type="number" id="numberOfPassenger" name="numberOfPassenger" min="0" value={numberOfPassenger} onChange={onNumberOfPassengerChange}/>
+                
+                <label for="totalPrice">Total Price:</label>
+                <input type="number" id="totalPrice" name="totalPrice" min="0" value={totalPrice} onChange={onTotalPriceChange}/>
             
-            <label for="returnTimeDeparture">Return Time Departure:</label>
-            <input type="Text" id="returnTimeDeparture" name="returnTimeDeparture" min="0" value={returnTimeDeparture} onChange={onReturnTimeDepartureChange}/>
-           
-            <label for="returnTimeArrival">Return Time Arrival:</label>
-            <input type="Text" id="returnTimeArrival" name="returnTimeArrival" min="0" value={returnTimeArrival} onChange={onReturnTimeArrivalChange}/>
-           
-            <label for="numberOfPassenger">Number of Passengers:</label>
-            <input type="number" id="numberOfPassenger" name="numberOfPassenger" min="0" value={numberOfPassenger} onChange={onNumberOfPassengerChange}/>
-            
-            <label for="totalPrice">Total Price:</label>
-            <input type="number" id="totalPrice" name="totalPrice" min="0" value={totalPrice} onChange={onTotalPriceChange}/>
-           
-            <label for="customerFlightNumber">Customer Flight Number:</label>
-            <input type="Text" id="customerFlightNumber" name="customerFlightNumber" min="0" value={customerFlightNumber} onChange={onCustomerFlightNumberChange}/>
-            <input type="submit" value="Add new flight"/>
-        </form>
+                <label for="customerFlightNumber">Customer Flight Number:</label>
+                <input type="Text" id="customerFlightNumber" name="customerFlightNumber" min="0" value={customerFlightNumber} onChange={onCustomerFlightNumberChange}/>
+                <input type="submit" value="Add new flight"/>
+            </form>
+        </div>
     )
 
 }

@@ -14,16 +14,6 @@ class BookingFlightContainer extends React.Component{
         this.addNewBooking = this.addNewBooking.bind(this);
     }
 
-    // componentDidMount(){
-    //     this.getBookingsData();
-    // }
-
-    // getMovieData()
-    //     fetch("http://localhost:8080/movies")
-    //         .then((response) => response.json())
-    //         .then(data => this.setState({ movies: data, loaded: true }))
-    //         .catch(error => console.log(error))
-    // }
 
     addNewBooking(newBooking){
         fetch("http://localhost:8080/flights/make-booking",{
@@ -41,10 +31,7 @@ class BookingFlightContainer extends React.Component{
 
         return (
             <>
-                <h1>Flight Bookings</h1>
                 <BookingFlight handleFlightSubmission={this.addNewBooking}/>
-                <hr/>
-                {/* <MovieList bookings={this.state.bookings}/> */}
             </>
         )
     }

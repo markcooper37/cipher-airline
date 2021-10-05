@@ -25,6 +25,10 @@ const BookingDetailsCheck = (props) => {
             <p>Return Departure Time: {props.bookingDetails.value6}</p>
             <p>Return Arrival Time: {props.bookingDetails.value7}</p>
             <p>Total Price: {props.bookingDetails.value8}</p>
+
+            <br></br>
+            <br></br>
+            <br></br>
         
         </>
     )

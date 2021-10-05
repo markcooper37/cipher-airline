@@ -37,12 +37,24 @@ public record FlightController(FlightService flightService) {
     }
 
     @PutMapping
-    public void updatedFlight(int customerFlightId){
+    public void updatedFlight(@RequestParam int flightId,
+                              @RequestParam (required = false) boolean removeReturnTicket){
+
+        flightService.updateFlight(flightId, removeReturnTicket);
+    }
+
+
+
+
+
+
+    public void updatedFlight(int customerFlightId) {
         flightService.updateFlight(customerFlightId);
     }
 
     @DeleteMapping("/byCustomerFlightNumber")
-    public void deleteFlightByCustomerFlightNumber(int customerId, String customerFlightNumber){
+    public void deleteFlightByCustomerFlightNumber(@RequestParam int customerId,
+                                                   @RequestParam String customerFlightNumber){
         flightService.deleteCustomerFlightByFlightNumber(customerId, customerFlightNumber);
     }
 

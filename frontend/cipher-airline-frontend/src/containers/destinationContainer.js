@@ -25,7 +25,6 @@ class destinationContainer extends Component {
             .then(data => this.setState({destinations: data}))
             .then(this.setState({number:this.props.selector}))
             .then(this.setState({viewAll:this.props.viewAll}))
-            // .then(data => this.setState({oneDestination: data[this.props.selector]}))
             .catch(error => console.log(error))
             
     }

@@ -9,7 +9,7 @@ function Homepage() {
   return (
     <>
     <Card imageSrc={Hongkong} title1={"Discover your Dream Destination"} title2={"with Cipher Airlines"}/>
-    <FindFlightsCard title="Find Flights" text="Destination" buttonText="Search" />
+    <FindFlightsCard title="Explore Destinations" text="Destination" buttonText="Search" />
     <Card2 imageSrc={TravelMap2} title1={"Discover your Dream Destination"} title2={"with Cipher Airlines"}/>
     </>
   );

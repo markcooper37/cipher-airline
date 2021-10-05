@@ -25,20 +25,30 @@ function Card2(props) {
     )
 }
 
+// function FindFlightsCard(props) {
+//     return (
+//         <div className="findFlightsCard" styles="width: 18rem;">
+//             <h5 className ="findFlightsCar-title">{props.title}</h5>
+
+//             <form>
+//                 <input type="text" name="destination" autocomplete="off" required />
+//                 <label for="destination" class="label-destination">
+//                     <span class="content-destination">Destination</span>
+//                 </label>
+//                 {/* <button type="submit">Search</button> */}
+//             </form>
+//                 {/* <p className ="findFlightsCar-text">{props.text}</p> 
+//                 <a href="#" className ="btn btn-primary">{props.buttonText}</a>*/}
+//         </div>
+//     )
+// }
+
 function FindFlightsCard(props) {
     return (
         <div className="findFlightsCard" styles="width: 18rem;">
             <h5 className ="findFlightsCar-title">{props.title}</h5>
-
-            <form>
-                <input type="text" name="destination" autocomplete="off" required />
-                <label for="destination" class="label-destination">
-                    <span class="content-destination">Destination</span>
-                </label>
-                {/* <button type="submit">Search</button> */}
-            </form>
-                {/* <p className ="findFlightsCar-text">{props.text}</p> 
-                <a href="#" className ="btn btn-primary">{props.buttonText}</a>*/}
+           <a href="/destinations"> <p className ="findFlightsCar-text">{props.text}</p> </a>
+            {/* <a href="#" className ="btn btn-primary">{props.buttonText}</a> */}
         </div>
     )
 }
@@ -261,6 +271,17 @@ function FaqsBannerText(props) {
     )
 }
 
+function BookingDetailsCard(props) {
+    return (
+        <>
+            <div class="booking-details-body">
+                <p>{props.information}</p>
+            </div>
+            
+        </>
+    )
+}
+
 export{ Card,
         FindFlightsCard,
         Card2,
@@ -278,5 +299,6 @@ export{ Card,
         AboutUsCardBannerText,
         ContactUsCard,
         FaqsCard,
-        FaqsBannerText
+        FaqsBannerText,
+        BookingDetailsCard
 }

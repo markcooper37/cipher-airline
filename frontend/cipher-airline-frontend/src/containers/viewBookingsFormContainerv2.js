@@ -1,13 +1,15 @@
 import React from "react";
 import BookingDetailsListCheck from "../components/viewBookingDetailsListv2";
 import { ViewBookedFlights } from "../components/card";
+import ReturnAllBookingDetails from "../components/returnAllBookingDetails";
 class ViewBookingsFormContainerCheck extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             flights: [],
-            value: 0
+            value: 0,
+            viewAll: true
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,7 +44,7 @@ class ViewBookingsFormContainerCheck extends React.Component {
                     <input type='text' value={this.state.value} onChange={this.handleChange} placeholder='Customer Id' />
                     <input type='submit' value='Submit' />
                   </form> */}
-                  <BookingDetailsListCheck bookingsInformation={this.state.flights}></BookingDetailsListCheck>
+                  <ReturnAllBookingDetails bookings={this.state.flights} viewAll={this.state.viewAll}/>
               </div>
           )
       }

@@ -1,0 +1,42 @@
+
+
+.book-flights-form {
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgba(228, 228, 228, 0.021);
+    width:15%;
+    align-items: center;
+    align-self: center;
+    margin-left: 500px;
+    margin-right: auto;
+    margin-top: 150px;
+    z-index: 100;
+    position: absolute;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-direction: column;
+    font-family: 'Playfair';
+    overflow: hidden;
+}
+
+.book-flights-form form {
+    position: relative;
+    height: auto;
+    background: rgba(172, 151, 177, 0.137);
+    color: rgb(197, 170, 191);
+    overflow: hidden;
+}
+
+
+.book-flights-form input {
+    width: 100%;
+    height: 100%;
+    padding-top:10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    color:black;
+}

@@ -132,6 +132,17 @@ public class FlightService {
         return bookedFlightsDetails;
     }
 
+    public void updateFlight(int customerFlightId, boolean removeReturnTicket) {
+        flightRepositoryPostgres.findAll().forEach(flight -> {
+            if((flight.getFlightId() == customerFlightId) && (removeReturnTicket)){
+                            flight.setReturnTimeDeparture(null);
+                            flight.setReturnTimeArrival(null);
+                            flightRepositoryPostgres.save(flight);
+
+            }
+        });
+    }
+
 
     public void updateFlight(int customerFlightId){
         Scanner scanner = new Scanner(System.in);

@@ -1,0 +1,24 @@
+ .body {
+    display: flex;
+     /* flex-direction: column; */
+    text-align: left;
+}  
+/*
+.booking-form{
+    padding: 5px 20px;
+    margin: 20px 0;
+} */
+
+/* .remove-booking{
+    padding: 5px 20px;
+    margin: 20px 0;
+    background-color: aqua;
+    opacity: 0.1;
+}
+
+.remove-returnTicket{
+    padding: 5px 20px;
+    margin: 20px 0;
+    background-color: aquamarine;
+    opacity: 0.1;
+} */

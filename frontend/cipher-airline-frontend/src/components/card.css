@@ -239,6 +239,14 @@
     height:318px;
 }
 
+.booking-details-body {
+    background-color: rgba(194, 140, 180, 0.493);
+    margin:10px;
+    display:flex;
+    width:fit-content;
+    margin-left: 60px;
+}
+
 
 /* need to check and edit */
 .peopleInfo {
