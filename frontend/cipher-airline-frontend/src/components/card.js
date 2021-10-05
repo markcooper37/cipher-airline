@@ -82,9 +82,10 @@ function DestinationCard(props) {
         <>
         <div className="destinationCard">
             <div className="destinationCardImage">
-                <img src={props.imageSrc} className="destination-card-img" alt="" />
-            </div>
-            <h1 className="destinationName">{props.name}</h1>
+                <img src={props.imageSrc} className="destination-card-img" alt="props.alt" />
+                <h4 className="destinationName">{props.name}</h4>
+                <p className="destinationText">{props.text}</p>
+        </div>
         </div>
             
 
@@ -139,7 +140,7 @@ function AboutUsCardBannerText(props) {
 }
 
 
-function AboutUsCard(props) {
+function UsCard(props) {
     return (
         <> 
         <div className="aboutUsCard">
@@ -149,7 +150,6 @@ function AboutUsCard(props) {
             <div className="aboutUsInfo">
                 <h4 className="aboutUsInfoHeader">{props.name}</h4>
                 <p className="aboutUsInfoText">{props.text} <br/> {props.text1} <br/> {props.text3}</p>
-                <button class="moreButton" ><span>More </span></button>
             </div>
         </div>
         
@@ -178,6 +178,19 @@ function AboutUsNavigationCard(props) {
                 <li> <a href="/destinations">Our Values</a> </li>
                 <li> <a href="/destinations">Our Vision</a> </li>
                 <li> <a href="/destinations">Our Operations</a> </li>
+            </ul>
+        </div>
+    )
+
+}
+
+function contactUsNavigationCard(props) {
+    return (
+        <div className="contact-us-nav">
+            <ul class="links-to-diff-page-sections">
+                <li> <a href="/destinations">Contact Information</a> </li>
+                <li> <a href="/destinations">Covid 19 Information Hub</a> </li>
+                <li> <a href="/destinations">Visiting Us</a> </li>
             </ul>
         </div>
     )
@@ -219,6 +232,24 @@ function ContactUsCard(props) {
         </>
     )
 }
+
+function DestinationCard1(props) {
+    return (
+        <> 
+        <div className="destinationCard1">
+            <div className="destinationCardImage">
+                <img src={props.imageSrc} className="destination-card-image" alt={props.alt} />
+            </div>
+            <div className="destinationInfo1">
+            <h1 className="destinationInfoHeader1">{props.name}</h1>
+            <h2 className="destinationInfo1">{props.text}</h2>
+            </div>
+        </div>
+        
+        </>
+    )
+}
+
 
 
 function FaqCard(props) {
@@ -271,12 +302,14 @@ export{ Card,
         BookedFlights,
         PeopleCard,
         FaqCard,
-        AboutUsCard,
+        UsCard,
         AboutUsNavigationCard,
         TopCard,
         CardBannerAboutUs,
         AboutUsCardBannerText,
         ContactUsCard,
         FaqsCard,
-        FaqsBannerText
-}
+        FaqsBannerText,
+        contactUsNavigationCard,
+        DestinationCard1
+    }

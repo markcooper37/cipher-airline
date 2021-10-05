@@ -21,7 +21,7 @@
     position: absolute;
     bottom: 300px;
     right:50px;
-    color: white;
+    color: rgba(0, 0, 0, 0.521);;
     padding-left: 20px;
     padding-right: 20px; 
     background-color: transparent;  
@@ -200,9 +200,8 @@
     transition: 0.3s;
     border-radius: 0px;
     margin: 3rem;
-    border-radius: 25px;
-    width: 400px;
-    height: 400px;
+    width: 1000px;
+    height: 300px;
     background-color: rgba(212, 203, 203, 0.637);
     overflow: hidden;
 }
@@ -210,7 +209,7 @@
 .destinationCardInfo h1 {
     transform: translateY(-400%);
     left:50px;
-    color:white;
+    color:rgb(7, 6, 6);
     font-family: 'Playfair';
 }
 
@@ -369,6 +368,28 @@
     background-color: rgba(150, 163, 207, 0.522);
 }
 
+.contact-us-nav {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 12vh;
+    background-color: transparent;
+    font-family: 'Playfair';
+    z-index: 500;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-82%);
+    
+    background-color: rgba(150, 163, 207, 0.282);
+}
+    
+.contact-us-nav:hover {
+    position: absolute;
+    background-color: rgba(150, 163, 207, 0.522);
+}
+
 .links-to-diff-page-sections {
     display: flex;
     justify-content: space-between;
@@ -512,6 +533,7 @@ padding-top: 5%;
     border-bottom: 3px solid rgb(129, 11, 119);
 
 }
+
 .contactUs-card-image {
     width: 500px;
     height: auto;
@@ -539,6 +561,39 @@ padding-top: 5%;
     margin-bottom: 2rem;
     border-top: 3px solid rgb(89, 3, 187);
 
+}
+
+
+
+.destination-card-image1{
+    width: 500px;
+    height: auto;
+}
+.destinationInfo1{
+    width: 500px;
+    padding: 5px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: rgba(92, 62, 116, 0.993);
+
+}
+
+.destinationInfoHeader1{
+    font-weight: bold;
+    color: rgb(118, 104, 129);
+}
+
+.destinationCard1{
+    display:flex;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 0px;
+    margin: 0.5rem;
+    width: 1000px;
+    height: 100px;
+    background-color: rgba(212, 203, 203, 0.637);
+    overflow: hidden;
 }
 .moreButton {
   display: relative;

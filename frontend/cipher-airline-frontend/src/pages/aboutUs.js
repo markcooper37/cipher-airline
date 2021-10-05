@@ -1,5 +1,5 @@
 import './aboutUs.css';
-import { CardBannerAboutUs, AboutUsCard, AboutUsNavigationCard} from '../components/card';
+import { CardBannerAboutUs, UsCard, AboutUsNavigationCard} from '../components/card';
 import aboutUsBanner from '../resources/aboutUsBanner.jpeg'
 import People from '../resources/meetOurPeople.jpg';
 import Sustainability from '../resources/sustainability.jpg';
@@ -25,10 +25,10 @@ function AboutUs() {
                 */}
                 <AboutUsNavigationCard/>
                 <div className="aboutUsDetail">
-                    <AboutUsCard name='Our people' text='Our dynamic and diverse workforce are at the heart of our success. At the helm of our business, is a stable executive team that has led the growth and success of the Emirates Group. Our executive leaders continue to drive innovation and build on our foundations for long-term success. Learn more about our leadership team.'/>
-                    <AboutUsCard imageSrc={Sustainability} name='Our values' text='We are fully committed to responsible business and environmental stewardship. Cipher Airlines is committed to environmental stewardship. We focus our efforts on three areas: reducing emissions, consuming responsibly, and preserving wildlife and habitats. Learn about our holistic approach to sustainability and eco‑efficiency.'/>
-                    <AboutUsCard imageSrc={Airplane} name='Our vision' text= 'Our mission is to deliver the world best in flight experience using cutting edge technology. Learn more about how we use Machine Learning, Internet of Things and Artificial Intelligence to ensure your Flight experience is exquisite.'/>
-                    <AboutUsCard imageSrc={Operations} name='Our operations' text= 'At the heart of our operation is a rigorous safety risk management mind‑set and focus on safe behaviour and safety practices. We apply thorough risk and change management principles to all aspects of our operation, including Flight Operations, Cargo, Engineering, Ground Operations and Cabin Safety. We have one of the youngest fleets in the air and we strive constantly for continuous improvement in safety. Our proactive initiatives include, new operational digital tools and technology that improve safety efficiencies.'/>
+                    <UsCard name='Our people' text='Our dynamic and diverse workforce are at the heart of our success. At the helm of our business, is a stable executive team that has led the growth and success of the Emirates Group. Our executive leaders continue to drive innovation and build on our foundations for long-term success. Learn more about our leadership team.'/>
+                    <UsCard imageSrc={Sustainability} name='Our values' text='We are fully committed to responsible business and environmental stewardship. Cipher Airlines is committed to environmental stewardship. We focus our efforts on three areas: reducing emissions, consuming responsibly, and preserving wildlife and habitats. Learn about our holistic approach to sustainability and eco‑efficiency.'/>
+                    <UsCard imageSrc={Airplane} name='Our vision' text= 'Our mission is to deliver the world best in flight experience using cutting edge technology. Learn more about how we use Machine Learning, Internet of Things and Artificial Intelligence to ensure your Flight experience is exquisite.'/>
+                    <UsCard imageSrc={Operations} name='Our operations' text= 'At the heart of our operation is a rigorous safety risk management mind‑set and focus on safe behaviour and safety practices. We apply thorough risk and change management principles to all aspects of our operation, including Flight Operations, Cargo, Engineering, Ground Operations and Cabin Safety. We have one of the youngest fleets in the air and we strive constantly for continuous improvement in safety. Our proactive initiatives include, new operational digital tools and technology that improve safety efficiencies.'/>
                 </div>
 
             </div>
