@@ -41,8 +41,13 @@ public record FlightController(FlightService flightService) {
         flightService.updateFlight(customerFlightId);
     }
 
-    @DeleteMapping("/byCustomerFlightNumber")
+    /* @DeleteMapping("/byCustomerFlightNumber")
     public void deleteFlightByCustomerFlightNumber(int customerId, String customerFlightNumber){
+        flightService.deleteCustomerFlightByFlightNumber(customerId, customerFlightNumber);
+    } */
+
+    @DeleteMapping("/byCustomerFlightNumber/{customerId}/{customerFlightNumber}")
+    public void deleteFlightByCustomerFlightNumber(@PathVariable int customerId, @PathVariable String customerFlightNumber){
         flightService.deleteCustomerFlightByFlightNumber(customerId, customerFlightNumber);
     }
 
