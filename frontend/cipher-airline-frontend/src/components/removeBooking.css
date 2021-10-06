@@ -1,0 +1,105 @@
+.cancel-booking {
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgb(226, 203, 195);
+    width:550px;
+    height: 400px;
+    align-items: center;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: auto;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    font-family: 'Playfair';
+    overflow: hidden;
+}
+
+.cancel-booking:hover{
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgb(219, 190, 180);
+    width:550px;
+    height: 400px;
+    align-items: center;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: auto;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    font-family: 'Playfair';
+    overflow: hidden;
+}
+
+
+.cancel-booking h1 {
+    font-size: 200%;
+    color: rgb(247, 239, 239);
+    font-family: 'Playfair';
+    text-align: center;
+}
+
+
+.cancel-booking form {
+    position: relative;
+    height: 250px;
+    background: rgba(240, 248, 255, 0);
+    color: rgb(99, 96, 96);
+    overflow:hidden;
+    width: 100%;
+}
+
+
+.first-input form input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color:white;
+} 
+
+
+.second-input form input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color:white;
+} 
+
+
+.first-input form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(99, 96, 96);
+} 
+
+
+.second-input form label {
+    position: relative;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height:100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(99, 96, 96);
+}
+
+
+.first-input form label::after {
+    content: "";
+    position: fixed;
+    left: 0px;
+    bottom: -3px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid rgb(204, 149, 149);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: hidden;
+} 

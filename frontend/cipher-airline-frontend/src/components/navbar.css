@@ -1,0 +1,234 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: transparent;
+    font-family: 'Playfair';
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    position: fixed;
+    padding: 0.8%;
+}
+
+nav:hover {
+    background-color: rgb(207, 150, 167);
+    position: fixed;
+}
+
+.logo{
+    color:rgb(231, 231, 231);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.logo li {
+    list-style: none;
+}
+
+.logo a {
+    color:rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+
+.nav-links li{
+    list-style: none;
+    align-items: center;
+}
+
+
+.nav-links a{
+    color:rgb(231, 231, 231);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.nav-links a:hover {
+   cursor: pointer;
+   text-decoration: none;
+   color: rgb(216, 207, 126);
+}
+
+.logo h4 a:hover {
+  cursor: pointer;
+   text-decoration: none;
+   color: rgb(216, 207, 126);
+}
+
+
+@media screen and (max-width:1024px) {
+    .nav-links{
+        width: 60%;
+    }
+}
+
+
+.NavBar .MobileNavigation {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .NavBar .Navigation {
+        display: none;
+    }
+
+    .NavBar .MobileNavigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .MobileNavigation body {
+        overflow-x: hidden;
+        
+    }
+
+
+    .NavBar .MobileNavigation .burger div{
+        position: relative;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(231, 231, 231);
+        margin: 5px;
+    }
+
+
+    .NavBar .MobileNavigation .burger {
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
+        display: block;
+    }
+
+    .NavBar nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 40px;
+        right:0;
+        width:100%;
+        background: #1818185b;
+        border-top: 2px solid #f5a4c9;
+        z-index: 999999;
+        overflow: hidden;
+        /* transform: translateX(100%);
+        transition: transform 1s ease-in; */
+    }
+
+    .NavBar nav ul li {
+        padding-left: 55%;
+    }
+
+    .NavBar {
+        opacity: 1;
+    }
+
+    /* .NavBar .nav-active {
+        transform: translateX(10%);
+    } */
+
+}
+
+
+
+
+/* @media screen and (max-width:768px) {
+.NavBar .Navigation {
+        display: none;
+    }
+
+    .NavBar .MobileNavigation {
+        display: flex;
+        background: red;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .NavBar .MobileNavigation burger div{
+        width: 25px;
+        height: 2px;
+        background-color:rgb(231, 231, 231);
+        position: relative;
+        
+    }
+    
+    .NavBar .MobileNavigation burger {
+        cursor: pointer;
+    }
+
+    .NavBar MobileNavigation .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:rgb(221, 159, 188);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .NavBar .MobileNavigation .nav-links li {
+        opacity: 0;
+    }
+    .NavBar .MobileNavigation .burger {
+        display: block;
+    }
+
+
+
+.NavBar .nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg translate(-5px, 6px));
+}
+
+.toggle .line2 {
+    opacity: 0;
+    
+}
+
+.NavBar .MobileNavigation .toggle .line3 {
+    transform: rotate(45deg translate(-5px, -6px));
+} 
+} */
+ 

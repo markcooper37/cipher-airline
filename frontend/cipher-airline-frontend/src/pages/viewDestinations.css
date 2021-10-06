@@ -1,0 +1,31 @@
+
+
+.viewDestinationsBody {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    background-color: rgba(255, 218, 185, 0.514);
+    margin: 0;
+    padding: 0;
+    
+}
+
+.viewDestinationHeading {
+    background-color: rgba(255, 218, 185, 0.514);
+}
+
+/* .viewDestinationsBodyLeft {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.viewDestinationsBodyRight {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+} */
