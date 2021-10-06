@@ -84,10 +84,10 @@ const NewBooking = (props) => {
                 
                 <label for="customersId">Customer Id:</label>
                 <input type="number" id="customersId" name="customersId" value={customersId} onChange={onCustomersIdChange}/>
-                
-                <label for="withReturnTicket">Return Ticket:</label>
-                <input type="checkbox" id="withReturnTicket" name="withReturnTicket" min="0" value={withReturnTicket} onChange={onReturnTicketChange}/>
-                
+                <div checkbox>
+                    <label for="withReturnTicket">Return Ticket:</label>
+                    <input type="checkbox" id="withReturnTicket" name="withReturnTicket" min="0" value={withReturnTicket} onChange={onReturnTicketChange}/>
+                </div>
                 <label for="returnTimeDeparture">Return Time Departure:</label>
                 <input type="Text" id="returnTimeDeparture" name="returnTimeDeparture" min="0" value={returnTimeDeparture} onChange={onReturnTimeDepartureChange}/>
             
@@ -102,7 +102,9 @@ const NewBooking = (props) => {
             
                 <label for="customerFlightNumber">Customer Flight Number:</label>
                 <input type="Text" id="customerFlightNumber" name="customerFlightNumber" min="0" value={customerFlightNumber} onChange={onCustomerFlightNumberChange}/>
-                <input type="submit" value="Add new flight"/>
+                <div class="button">
+                    <input type="submit" value="Add new flight"/>
+                </div>
             </form>
         </div>
     )

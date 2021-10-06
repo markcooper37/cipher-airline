@@ -10,20 +10,22 @@ function ViewBookingDetails() {
 
   return (
     <>
-      <Card imageSrc={Hongkong} title1={"Discover your Dream Destination"} title2={"with Cipher Airlines"}/>
-      <div class = "body">
-        <div>
-        <div class = "booking-form">
-          <ViewBookingsFormContainerCheck /> 
+    <div class="full-container">
+        <Card imageSrc={Hongkong} title1={"Discover your Dream Destination"} title2={"with Cipher Airlines"}/>
+        <div class="booking-form-container">
+          <h1> Your Flight Bookings</h1>
+          <div class = "booking-form">
+            <ViewBookingsFormContainerCheck /> 
+          </div>
         </div>
-        </div>
-        <div>
-        <div class = "remove-booking">
-          <RemoveBookingContainer />
-        </div>
-        <div class = "remove-returnTicket">
-          <EditFlightBookingContainer />
-        </div>
+        
+        <div class = "body">
+          <div class = "remove-booking">
+            <RemoveBookingContainer />
+          </div>
+          <div class = "remove-returnTicket">
+            <EditFlightBookingContainer />
+          </div>
         </div>
       </div>
     </>

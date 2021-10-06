@@ -90,8 +90,8 @@
 .bookedFlightsCard-body {
     display: flex;
     justify-content: space-between;
-
 }
+
 
 .findFlightsCard {
     transition: 0.3s;
@@ -106,10 +106,12 @@
     position: absolute;
 }
 
+
 .findFlightsCard:hover {
     box-shadow: 0 10px 18px 0 rgba(0,0,0,0.3);
     background-color: rgb(207, 166, 178);
 }
+
 
 .findFlightsCar-title {
     text-align: center;
@@ -118,6 +120,7 @@
     color: white;
     font-family: 'Playfair';
 }
+
 
 .findFlightsCard {
     display: flex;
@@ -129,6 +132,11 @@
     overflow: hidden;
 }
 
+.findFlightsCard a {
+    text-decoration: none;
+    color:rgb(231, 231, 231);
+}
+
 .findFlightsCard form {
     position: relative;
     height: 50px;
@@ -136,6 +144,7 @@
     color: rgb(99, 96, 96);
     overflow: hidden;
 }
+
 
 .findFlightsCard form input {
     width: 100%;
@@ -240,13 +249,18 @@
 }
 
 .booking-details-body {
-    background-color: rgba(194, 140, 180, 0.493);
-    margin:10px;
+    background-color: rgba(250, 132, 191, 0.062);
+    width: 500px;
     display:flex;
-    width:fit-content;
-    margin-left: 60px;
+   
+    margin-left: 0px;
+    border-bottom: 1px solid black;
 }
 
+.booking-details-body p {
+    margin-left: 50px;
+    text-align: center;
+}
 
 /* need to check and edit */
 .peopleInfo {

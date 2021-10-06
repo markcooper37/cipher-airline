@@ -1,13 +1,30 @@
  .body {
     display: flex;
+
      /* flex-direction: column; */
     text-align: left;
+    margin-top: 100px;
 }  
-/*
-.booking-form{
+
+.booking-form-container h1{
+    background-color:rgba(250, 132, 191, 0.062);
+    width: 500px;
+}
+.booking-form-container h1 {
+color:rgb(250, 245, 240);
+width:39.5%;
+text-align: center;
+}
+
+.full-container{
+    background-color: rgba(207, 194, 171, 0.363);
+}
+/*.booking-form-container{
     padding: 5px 20px;
-    margin: 20px 0;
-} */
+    margin: 60px 0;
+    margin-top: 200px;
+    position: relative;
+ } */
 
 /* .remove-booking{
     padding: 5px 20px;

@@ -16,6 +16,8 @@ const BookingDetailsCheck = (props) => {
             line 9 ={props.bookingDetails.value8}
         </BookedFlights> */}
 
+            <br></br>
+
             <p>Flight ID: {props.bookingDetails.value0}</p>
             <p>Customer Flight Number: {props.bookingDetails.value1}</p>
             <p>Country Name: {props.bookingDetails.value2}</p>
@@ -27,8 +29,7 @@ const BookingDetailsCheck = (props) => {
             <p>Total Price: {props.bookingDetails.value8}</p>
 
             <br></br>
-            <br></br>
-            <br></br>
+            
         
         </>
     )

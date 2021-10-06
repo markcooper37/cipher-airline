@@ -1,4 +1,5 @@
 import {useState} from "react";
+import  "./editFlightBooking.css";
 
 const EditFlightBooking = (props) => {
 
@@ -28,15 +29,25 @@ const EditFlightBooking = (props) => {
     })
 
     return (
-        <form onSubmit={onFlightSubmission}>
-            <label for="flightId">Flight Id:</label>
-            <input type="number" id="flightId" name="flightId" value={flightId} onChange={onFlightIdChange}/>
-            
-            <label for="removeReturnTicket">Remove Return Ticket:</label>
-            <input type="checkbox" id="removeReturnTicket" name="removeReturnTicket" value={removeReturnTicket} onChange={onRemoveReturnTicketChange}/>
-            
-            <input type="submit" value="Edit flight"/>
-        </form>
+        <>
+        
+            <div class="form">
+                <h1>Update Booking</h1>
+                <form onSubmit={onFlightSubmission}>
+                    <div class="first-input">
+                        <label for="flightId">Flight Id:</label>
+                        <input type="number" id="flightId" name="flightId" value={flightId} onChange={onFlightIdChange}/>
+                    </div>
+                    <div class="second-input">
+                        <label for="removeReturnTicket">Remove Return Ticket:</label>
+                        <input type="checkbox" id="removeReturnTicket" name="removeReturnTicket" value={removeReturnTicket} onChange={onRemoveReturnTicketChange}/>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Edit flight"/>
+                    </div>
+                </form>
+            </div>
+        </>
     )
 
 }

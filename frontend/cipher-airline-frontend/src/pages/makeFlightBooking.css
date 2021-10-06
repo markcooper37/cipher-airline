@@ -1,3 +1,24 @@
-.booking-flight-body {
-    background-color: orange;
+.container {
+    background-image: url('../resources/airplaneBackground.jpeg');
+    z-index: 0;
+}
+
+
+.booking-flight-heading {
+    margin-top: 230px;
+    padding-left: 30%;
+    color:aliceblue;
+}
+
+.booking-flight-heading h2{
+    font-family: 'Playfair';
+    margin-left: 370px;
+    font-style: italic;
+ 
+
+}
+
+.booking-flight-heading h1{
+    font-family: 'Playfair';
+
 }

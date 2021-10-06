@@ -37,14 +37,18 @@ const RemoveBooking = (props) => {
         <div class="cancel-booking">
             <h1>Cancel Booking</h1>
             <form onSubmit={onFlightSubmission}>
-                <div>
+                <div class= "first-input">
                     <label for="customerId">Customer Id:</label>
                     <input type="number" id="customerId" name="customerId" value={customerId} onChange={onCustomerIdChange}/>
                 </div>
                 <br></br>
+                <div class= "second-input">
                 <label for="customerFlightNumber">Customer Flight Number:</label>
                 <input type="text" id="customerFlightNumber" name="customerFlightNumber" value={customerFlightNumber} onChange={onCustomerFlightNumberChange}/>
-                <input type="submit" value="Cancel flight"/>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Cancel flight"/>
+                </div>
             </form>
         </div>
     )
