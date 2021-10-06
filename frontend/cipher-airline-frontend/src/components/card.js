@@ -282,7 +282,18 @@ function BookingDetailsCard(props) {
     )
 }
 
+function DestinationName(props) {
+    return (
+        <>
+            <div class="destination-name">
+                <h5>{props.name}</h5>
+            </div>
+        </>
+        )
+}
+
 export{ Card,
+        DestinationName,
         FindFlightsCard,
         Card2,
         DestinationCard,

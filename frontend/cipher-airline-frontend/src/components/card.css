@@ -248,8 +248,25 @@
     height:318px;
 }
 
+.destination-name{
+    background-color:rgba(255, 182, 193, 0.363);
+    margin-bottom: solid black;
+    margin-top: 20px;
+}
+
+.destination-name:hover{
+    background-color:rgba(255, 182, 193, 0.575);
+    margin-bottom: solid black;
+    margin-top: 20px;
+}
+
+.destination-name h5{
+    color: white;
+    font-family:'Playfair';
+}
+
 .booking-details-body {
-    background-color: rgba(250, 132, 191, 0.062);
+    background-color: rgb(226, 203, 195);
     width: 500px;
     display:flex;
    

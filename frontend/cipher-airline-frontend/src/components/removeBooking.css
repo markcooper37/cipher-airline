@@ -1,22 +1,37 @@
 .cancel-booking {
     transition: 0.3s;
     border-radius: 0px;
-    background-color: rgba(190, 137, 188, 0.452);
-    width:40%;
-    height: 500px;
+    background-color: rgb(226, 203, 195);
+    width:550px;
+    height: 400px;
     align-items: center;
     align-self: center;
-    margin-left: 350px;
+    margin-left: 10px;
     margin-right: auto;
-    margin-top: 150px;
     z-index: 100;
-    position: absolute;
-
     display: flex;
     justify-content: space-around;
     padding: 2rem;
-    flex-direction: column;
     font-family: 'Playfair';
+    overflow: hidden;
+}
+
+.cancel-booking:hover{
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgb(219, 190, 180);
+    width:550px;
+    height: 400px;
+    align-items: center;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: auto;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    font-family: 'Playfair';
+    overflow: hidden;
 }
 
 
@@ -34,6 +49,7 @@
     background: rgba(240, 248, 255, 0);
     color: rgb(99, 96, 96);
     overflow:hidden;
+    width: 100%;
 }
 
 
